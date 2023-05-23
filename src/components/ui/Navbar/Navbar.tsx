@@ -13,7 +13,7 @@ const Navbar = () => {
             {navlink.name}
           </li>
         ))}
-        <Button title="Get Started Now" varient="primary" />
+        <Button title="Get Started Now" variant="primary" size="medium" />
       </ul>
     </nav>
   );

@@ -1,4 +1,5 @@
 interface ButtonProps {
   title: string;
-  varient?: "primary" | "secondary";
+  variant?: "primary" | "secondary";
+  size?: "medium" | "large";
 }

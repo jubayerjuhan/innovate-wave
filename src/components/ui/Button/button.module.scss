@@ -27,3 +27,9 @@
     background-color: $primary-color;
   }
 }
+
+.largeButton {
+  padding: calc($padding-sm + 4px) calc($padding-md + 4px);
+  border-radius: 30px;
+  font-size: $font-size-md;
+}
