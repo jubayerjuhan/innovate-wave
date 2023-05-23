@@ -1,0 +1,42 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+// colors variable
+$primary-color: #028fd7;
+$secondary-color: #2d3f4e;
+
+// Variables for margin
+$margin-xs: 0.5rem; // Extra small margin
+$margin-sm: 1rem; // Small margin
+$margin-md: 1.5rem; // Medium margin
+$margin-lg: 2rem; // Large margin
+$margin-xl: 3rem; // Extra large margin
+
+// Variables for padding
+$padding-xs: 0.5rem; // Extra small padding
+$padding-sm: 1rem; // Small padding
+$padding-md: 1.5rem; // Medium padding
+$padding-lg: 2rem; // Large padding
+$padding-xl: 3rem; // Extra large padding
+
+// Font sizes
+$font-size-xs: 12px; // Extra small font size
+$font-size-sm: 14px; // Small font size
+$font-size-md: 16px; // Medium font size
+$font-size-lg: 18px; // Large font size
+$font-size-xl: 20px; // Extra large font size
+$font-size-xxl: 24px; // Double extra large font size
+
+// Font weights
+$font-weight-light: 300; // Light font weight
+$font-weight-regular: 400; // Regular font weight (default)
+$font-weight-medium: 500; // Medium font weight
+$font-weight-semibold: 600; // Semibold font weight
+$font-weight-bold: 700; // Bold font weight
+$font-weight-extra-bold: 800; // Extra bold font weight
+
+:export {
+  primaryColor: $primary-color;
+  secondaryColor: $secondary-color;
+}

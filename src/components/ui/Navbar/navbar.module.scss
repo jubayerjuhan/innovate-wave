@@ -1,0 +1,39 @@
+@import "../../../styles/globals.scss";
+
+.navbar {
+  height: 90px;
+  color: $secondary-color;
+  padding: $padding-xs $padding-xl;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navlink__list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.navlink {
+  padding: 5px 0px;
+  position: relative;
+  cursor: pointer;
+  font-size: $font-size-lg;
+}
+
+.navlink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: $primary-color;
+  transition: width 0.3s ease;
+}
+
+.navlink:hover::after {
+  width: 100%;
+}
