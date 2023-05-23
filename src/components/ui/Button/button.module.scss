@@ -1,0 +1,29 @@
+@import "@/styles/globals.scss";
+.button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: $primary-color;
+  font-size: $font-size-sm;
+  padding: $padding-sm $padding-md;
+  border-radius: 25px;
+  color: $white-color;
+  font-family: inherit;
+  font-weight: $font-weight-medium;
+  letter-spacing: normal;
+  transition: all 300ms ease;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.secondaryButton {
+  @extend .button;
+  background-color: $secondary-color;
+  transition: all 300ms ease;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}

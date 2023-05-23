@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./navbar.module.scss";
 import NAVLINKS from "@/constants/links/navlinks";
+import Button from "../Button/Button";
 
 const Navbar = () => {
   return (
@@ -12,6 +13,7 @@ const Navbar = () => {
             {navlink.name}
           </li>
         ))}
+        <Button title="Get Started Now" varient="primary" />
       </ul>
     </nav>
   );
