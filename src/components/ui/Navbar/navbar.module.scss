@@ -9,7 +9,9 @@
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  // overflow-y: hidden;
+  svg {
+    display: none;
+  }
 }
 
 .logo {
@@ -48,17 +50,12 @@
   width: 100%;
 }
 
-.menuIcon {
-  display: none;
-}
-
-.closeIcon {
-  display: none;
-}
-
 @media (max-width: 768px) {
   .navbar {
     padding: $padding-sm;
+    svg {
+      display: block;
+    }
   }
 
   .logo {
