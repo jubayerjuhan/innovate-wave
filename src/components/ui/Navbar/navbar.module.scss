@@ -1,6 +1,7 @@
 @import "../../../styles/globals.scss";
 
 .navbar {
+  position: relative;
   height: 90px;
   color: $secondary-color;
   padding: $padding-xs $padding-xl;
@@ -8,10 +9,12 @@
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  // overflow-y: hidden;
 }
 
 .logo {
   width: 150px;
+  height: fit-content;
   object-fit: contain;
 }
 
@@ -43,4 +46,66 @@
 
 .navlink:hover::after {
   width: 100%;
+}
+
+.menuIcon {
+  display: none;
+}
+
+.closeIcon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: $padding-sm;
+  }
+
+  .logo {
+    width: 130px;
+  }
+
+  .menuIcon {
+    display: block;
+    color: $primary-color;
+  }
+
+  .navlink__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh !important;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: $padding-lg;
+    background-color: $primary-color;
+    transform: translateX(400px);
+    z-index: 1;
+    transition: all 300ms ease;
+    display: none;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: all 300ms ease;
+    .closeIcon {
+      display: block;
+      color: $white-color;
+      position: absolute;
+      top: 25px;
+      right: 20px;
+    }
+    .navlink {
+      color: $white-color;
+    }
+    button {
+      background-color: $secondary-color;
+    }
+  }
+
+  .navOpen {
+    transform: translateX(0);
+    display: flex;
+    opacity: 1;
+    transition: all 300ms ease;
+  }
 }
