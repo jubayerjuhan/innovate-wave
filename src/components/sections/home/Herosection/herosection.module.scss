@@ -1,0 +1,36 @@
+@import "../../../../styles/globals.scss";
+.heroSection {
+  padding: $padding-sm $desktop-padding-section;
+  min-height: calc(100vh - 90px);
+
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 20px;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 30px;
+}
+
+.heroHeading {
+  font-size: $font-size-heading-xl;
+  font-weight: $font-weight-bold;
+  color: $secondary-color;
+}
+
+.heroDescription {
+  font-size: $font-size-description-lg;
+  line-height: 1.6;
+}
+
+.imageSection {
+  width: 100%;
+}
+
+.heroImage {
+  width: 100%;
+}

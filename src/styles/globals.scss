@@ -22,6 +22,7 @@ $padding-sm: 1rem; // Small padding
 $padding-md: 1.5rem; // Medium padding
 $padding-lg: 2rem; // Large padding
 $padding-xl: 3rem; // Extra large padding
+$desktop-padding-section: 4rem; // Extra small padding
 
 // Font sizes
 $font-size-xs: 12px; // Extra small font size
@@ -38,6 +39,15 @@ $font-weight-medium: 500; // Medium font weight
 $font-weight-semibold: 600; // Semibold font weight
 $font-weight-bold: 700; // Bold font weight
 $font-weight-extra-bold: 800; // Extra bold font weight
+
+$font-size-heading-xl: 70px; // Heading font size
+$font-size-heading-lg: 50px; // Heading font size
+$font-size-heading-md: 36px; // Heading font size
+$font-size-heading-sm: 24px; // Heading font size
+$font-size-description-lg: 20px; // Description font size
+$font-size-description: 16px; // Description font size
+$font-size-body: 14px; // Body text font size
+$font-size-small: 12px; // Small text font size
 
 :export {
   primaryColor: $primary-color;
