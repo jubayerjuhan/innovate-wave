@@ -1,31 +1,34 @@
 import React from "react";
-import styles from "./herosection.module.scss";
+import styles from "./featureWithImageSection.module.scss";
 import Button from "@/components/ui/Button/Button";
 import Image from "next/image";
 import heroImage from "../../../../assets/heroImage.png";
-import TextBlock from "@/components/ui/Text/TextBlock/TextBlock";
 
-const Herosection = () => {
+const FeatureWithImageSection = () => {
   return (
-    <div className={styles.heroSection}>
+    <div className={styles.featureSection}>
       <div className={styles.infoSection}>
-        <h2 className={styles.heroHeading}>
+        <h2 className={styles.featureHeading}>
           <span>Grow Your </span>
           <br />
           business start marketing
         </h2>
-        <TextBlock>
+        <p className={styles.featureDescription}>
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. Exercitation
           veniam consequat sunt.
-        </TextBlock>
+        </p>
         <Button size="large" title="Get Started Now" />
       </div>
       <div className={styles.imageSection}>
-        <Image src={heroImage} alt="Hero Image" className={styles.heroImage} />
+        <Image
+          src={heroImage}
+          alt="Hero Image"
+          className={styles.featureImage}
+        />
       </div>
     </div>
   );
 };
 
-export default Herosection;
+export default FeatureWithImageSection;

@@ -1,3 +1,4 @@
+import FeatureWithImageSection from "@/components/sections/home/FeatureWithImageSection/FeatureWithImageSection";
 import Herosection from "@/components/sections/home/Herosection/Herosection";
 import Navbar from "@/components/ui/Navbar/Navbar";
 import PageWrapper from "@/components/wrappers/PageWrapper/PageWrapper";
@@ -7,6 +8,7 @@ export default function Home() {
     <PageWrapper>
       <Navbar />
       <Herosection />
+      <FeatureWithImageSection />
     </PageWrapper>
   );
 }

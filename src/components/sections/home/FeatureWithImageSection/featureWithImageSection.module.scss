@@ -1,7 +1,7 @@
 @import "../../../../styles/globals.scss";
-.heroSection {
+.featureSection {
   padding: $padding-sm $desktop-padding-section;
-  min-height: calc(100vh - 90px);
+  min-height: calc(100vh);
 
   display: grid;
   grid-template-columns: repeat(2, 50%);
@@ -16,15 +16,14 @@
   gap: 30px;
 }
 
-.heroHeading {
-  font-size: $font-size-heading-xl;
+.featureHeading {
+  font-size: $font-size-heading-lg;
   font-weight: $font-weight-bold;
   color: $secondary-color;
-  line-height: 1.1;
 }
 
-.heroDescription {
-  font-size: $font-size-description-lg;
+.featureDescription {
+  font-size: $font-size-description;
   line-height: 1.6;
 }
 
@@ -34,7 +33,7 @@
   justify-content: flex-end;
 }
 
-.heroImage {
+.featureImage {
   width: 85%;
   object-fit: contain;
 }
