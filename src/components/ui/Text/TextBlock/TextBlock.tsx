@@ -10,7 +10,7 @@ const TextBlock = ({
   className?: string;
 }) => {
   return (
-    <p className={`${interFont.className} ${className} ${styles.textBlock}`}>
+    <p className={`${interFont.className} ${styles.textBlock} ${className}`}>
       {children}
     </p>
   );
