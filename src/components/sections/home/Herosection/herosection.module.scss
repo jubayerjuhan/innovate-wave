@@ -29,7 +29,7 @@
 }
 
 .imageSection {
-  width: 100%;
+  width: calc(100% - 30px);
   display: flex;
   justify-content: flex-end;
 }

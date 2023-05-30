@@ -1,14 +1,17 @@
 import React from "react";
 import Button from "@/components/ui/Button/Button";
 import Image from "next/image";
-import heroImage from "../../../../assets/heroImage.png";
+import featureImage from "../../../../assets/element-72.jpeg";
 import TextBlock from "@/components/ui/Text/TextBlock/TextBlock";
 import styles from "./featureWithImageSection.module.scss";
 import Subheading from "@/components/ui/FeatureSubheading/FeattureSubheading";
+import { FeatureSectionProps } from "./types";
 
-const FeatureWithImageSection = () => {
+const FeatureWithImageSection = ({ reverse }: FeatureSectionProps) => {
   return (
-    <div className={styles.featureSection}>
+    <div
+      className={`${styles.featureSection} ${reverse && styles.rowColReverse}`}
+    >
       <div className={styles.infoSection}>
         <Subheading title="Superioty" />
         <h2 className={styles.featureHeading}>
@@ -23,9 +26,9 @@ const FeatureWithImageSection = () => {
         </TextBlock>
         <Button size="large" title="Get Started Now" />
       </div>
-      <div className={styles.imageSection}>
+      <div className={`${styles.imageSection} ${reverse && styles.imgReverse}`}>
         <Image
-          src={heroImage}
+          src={featureImage}
           alt="Hero Image"
           className={styles.featureImage}
         />

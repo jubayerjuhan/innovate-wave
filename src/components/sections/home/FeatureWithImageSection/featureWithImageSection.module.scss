@@ -1,19 +1,23 @@
 @import "../../../../styles/globals.scss";
 .featureSection {
-  padding: $padding-sm $desktop-padding-section;
+  padding: $desktop-padding-section;
   min-height: calc(100vh);
+  display: flex;
+  flex-direction: row;
+  gap: $gap-lg;
+}
 
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  gap: 20px;
+.rowColReverse {
+  flex-direction: row-reverse;
 }
 
 .infoSection {
+  flex-basis: calc(50% - $gap-lg/2);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 30px;
+  gap: $gap-lg;
 }
 
 .featureHeading {
@@ -33,12 +37,75 @@
 }
 
 .imageSection {
+  flex-basis: calc(50% - $gap-lg/2);
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 
+.imgReverse {
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .featureImage {
   width: 85%;
   object-fit: contain;
+}
+
+// iPad air and small laptop
+@media (max-width: 992px) {
+  .featureSection {
+    flex-direction: column;
+    padding: $padding-xl $padding-xl;
+  }
+
+  .imageSection {
+    justify-content: center;
+  }
+
+  .featureImage {
+    width: 70%;
+  }
+
+  .rowColReverse {
+    flex-direction: column;
+  }
+}
+
+// iPad mini and tablets
+@media (max-width: 768px) {
+  .featureSection {
+    padding: $padding-md;
+  }
+
+  .featureHeading {
+    font-size: $font-size-heading-md;
+  }
+
+  .featureImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .featureDescription {
+    font-size: $font-size-description;
+    line-height: 1.6;
+  }
+}
+
+// Mobile device
+
+@media (max-width: 576px) {
+  .featureSection {
+    padding: calc($gap-lg * 2) $padding-sm;
+  }
+
+  .heroHeading {
+    font-size: $font-size-heading-md;
+  }
+
+  .infoSection {
+    gap: $gap-md;
+  }
 }

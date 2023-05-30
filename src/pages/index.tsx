@@ -9,6 +9,9 @@ export default function Home() {
       <Navbar />
       <Herosection />
       <FeatureWithImageSection />
+      <FeatureWithImageSection reverse />
+      <FeatureWithImageSection />
+      <FeatureWithImageSection reverse />
     </PageWrapper>
   );
 }
