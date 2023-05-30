@@ -8,10 +8,10 @@ export default function Home() {
     <PageWrapper>
       <Navbar />
       <Herosection />
-      <FeatureWithImageSection />
-      <FeatureWithImageSection reverse />
-      <FeatureWithImageSection />
-      <FeatureWithImageSection reverse />
+      <FeatureWithImageSection bulletType="iconOnly" />
+      <FeatureWithImageSection bulletType="iconOnly" reverse />
+      <FeatureWithImageSection bulletType="iconOnly" />
+      <FeatureWithImageSection bulletType="iconOnly" reverse />
     </PageWrapper>
   );
 }

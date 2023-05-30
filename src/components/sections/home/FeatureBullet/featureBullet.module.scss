@@ -1,0 +1,9 @@
+@import "../../../../styles/globals.scss";
+
+.featureBullets {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-lg;
+  padding: $padding-sm 0px;
+  width: 80%;
+}

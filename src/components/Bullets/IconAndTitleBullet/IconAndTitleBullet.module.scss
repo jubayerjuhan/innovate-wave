@@ -1,0 +1,43 @@
+@import "../../../styles/globals.scss";
+
+.bullet {
+  gap: $gap-md;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.bullet:nth-child(even) {
+  .iconWrapper {
+    background-color: #2d3f4e3f;
+
+    .icon {
+      color: #2d3f4e;
+    }
+  }
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #0aa0eb3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0aa0eb;
+
+  .icon {
+    font-size: 25px;
+  }
+}
+
+.bulletTitle {
+  font-size: calc($font-size-xxl + 6px);
+  color: $text-color;
+  margin-bottom: $margin-xs;
+}
+
+.description {
+  font-size: $font-size-md;
+  color: $text-color;
+}
