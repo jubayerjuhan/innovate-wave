@@ -6,11 +6,12 @@ import TextBlock from "@/components/ui/Text/TextBlock/TextBlock";
 import styles from "./featureWithImageSection.module.scss";
 import Subheading from "@/components/ui/FeatureSubheading/FeattureSubheading";
 import { FeatureSectionProps } from "./types";
-import FeatureBullet from "../FeatureBullet/FeatureBullet";
+import FeatureBullets from "../FeatureBullets/FeatureBullets";
 
 const FeatureWithImageSection = ({
   reverse,
   bulletType,
+  bullets,
 }: FeatureSectionProps) => {
   return (
     <div
@@ -28,7 +29,7 @@ const FeatureWithImageSection = ({
           sint. Velit officia consequat duis enim velit mollit. Exercitation
           veniam consequat sunt.
         </TextBlock>
-        <FeatureBullet bulletType="iconOnly" />
+        <FeatureBullets bulletType={bulletType} bullets={bullets} />
         <Button size="large" title="Get Started Now" />
       </div>
       <div className={`${styles.imageSection} ${reverse && styles.imgReverse}`}>
