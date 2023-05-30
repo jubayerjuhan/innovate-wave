@@ -11,7 +11,6 @@ const Herosection = () => {
       <div className={styles.infoSection}>
         <h2 className={styles.heroHeading}>
           <span>Grow Your </span>
-          <br />
           business start marketing
         </h2>
         <TextBlock className={styles.heroDescription}>

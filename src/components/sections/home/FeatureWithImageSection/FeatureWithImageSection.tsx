@@ -4,7 +4,7 @@ import Image from "next/image";
 import heroImage from "../../../../assets/heroImage.png";
 import TextBlock from "@/components/ui/Text/TextBlock/TextBlock";
 import styles from "./featureWithImageSection.module.scss";
-import Subheading from "@/components/ui/Subheading/Subheading";
+import Subheading from "@/components/ui/FeatureSubheading/FeattureSubheading";
 
 const FeatureWithImageSection = () => {
   return (
