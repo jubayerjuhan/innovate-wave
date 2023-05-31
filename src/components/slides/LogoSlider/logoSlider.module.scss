@@ -1,0 +1,13 @@
+@import "../../../styles/globals.scss";
+
+.subheading {
+  margin-bottom: $margin-xl;
+}
+
+.slider {
+  margin-bottom: 0px;
+}
+.slide {
+  display: flex !important;
+  justify-content: center;
+}

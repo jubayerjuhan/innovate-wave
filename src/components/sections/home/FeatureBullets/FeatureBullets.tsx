@@ -1,4 +1,4 @@
-import IconAndTitleBullet from "@/components/Bullets/IconAndTitleBullet/IconAndTitleBullet";
+import IconAndTitleBullet from "@/components/bullets/IconAndTitleBullet/IconAndTitleBullet";
 import React from "react";
 import { FiSettings } from "react-icons/fi";
 import styles from "./featureBullet.module.scss";

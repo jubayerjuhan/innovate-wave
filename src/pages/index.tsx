@@ -1,5 +1,6 @@
 import FeatureWithImageSection from "@/components/sections/home/FeatureWithImageSection/FeatureWithImageSection";
 import Herosection from "@/components/sections/home/Herosection/Herosection";
+import OurClients from "@/components/sections/home/OurClients/OurClients";
 import Navbar from "@/components/ui/Navbar/Navbar";
 import PageWrapper from "@/components/wrappers/PageWrapper/PageWrapper";
 import {
@@ -13,6 +14,7 @@ export default function Home() {
     <PageWrapper>
       <Navbar />
       <Herosection />
+      <OurClients />
       {homepageFeatures.map((feature, key) => (
         <FeatureWithImageSection
           bulletType={feature.bulletType}
