@@ -1,6 +1,7 @@
 import FeatureWithImageSection from "@/components/sections/home/FeatureWithImageSection/FeatureWithImageSection";
 import Herosection from "@/components/sections/home/Herosection/Herosection";
 import OurClients from "@/components/sections/home/OurClients/OurClients";
+import OurServices from "@/components/sections/home/OurServices/OurServices";
 import Navbar from "@/components/ui/Navbar/Navbar";
 import PageWrapper from "@/components/wrappers/PageWrapper/PageWrapper";
 import {
@@ -27,6 +28,7 @@ export default function Home() {
           description={feature.description}
         />
       ))}
+      <OurServices />
     </PageWrapper>
   );
 }

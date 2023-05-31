@@ -1,0 +1,39 @@
+@import "../../../styles/globals.scss";
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(177, 174, 174, 0.422);
+  padding: $padding-xl;
+  border-radius: 8px;
+}
+
+.icon {
+  border: 1px solid red;
+  // padding: calc($padding-xs + 5px);
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  margin-bottom: $margin-sm;
+  height: 75px;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.title {
+  font-size: $font-size-xxl;
+  margin-bottom: $margin-sm;
+}
+
+.description {
+  font-size: $font-size-description-lg;
+  line-height: 1.4;
+  margin-bottom: $margin-md;
+}
