@@ -7,3 +7,9 @@
   padding: $padding-sm 0px;
   width: 80%;
 }
+
+@media (max-width: 768px) {
+  .featureBullets {
+    width: 100%;
+  }
+}
