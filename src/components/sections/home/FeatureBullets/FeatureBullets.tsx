@@ -1,8 +1,7 @@
-import IconAndTitleBullet from "@/components/bullets/IconAndTitleBullet/IconAndTitleBullet";
 import React from "react";
-import { FiSettings } from "react-icons/fi";
 import styles from "./featureBullet.module.scss";
 import { Bullet } from "../FeatureWithImageSection/types";
+import IconAndTitleBullet from "@/components/bullets/IconAndTitleBullet/IconAndTitleBullet";
 
 const FeatureBullets = ({
   bulletType,
