@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./featureBullet.module.scss";
 import { Bullet } from "../FeatureWithImageSection/types";
-import { IconBulletProps } from "@/components/bullets/IconAndTitleBullet/types";
 import TextBlock from "@/components/ui/Text/TextBlock/TextBlock";
 
 const FeatureBullets = ({
@@ -29,7 +28,7 @@ const FeatureBullets = ({
 
 export default FeatureBullets;
 
-const IconAndTitleBullet = ({ Icon, type, bullet }: IconBulletProps) => {
+const IconAndTitleBullet = ({ Icon, type, bullet }: any) => {
   return (
     <div className={styles.bullet}>
       <div className={styles.iconWrapper}>
