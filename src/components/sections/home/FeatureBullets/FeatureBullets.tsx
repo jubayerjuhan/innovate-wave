@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./featureBullet.module.scss";
 import { Bullet } from "../FeatureWithImageSection/types";
-import IconAndTitleBullet from "@/components/bullets/IconAndTitleBullet/IconAndTitleBullet";
+import IconAndTitleBullet from "../../../bullets/IconAndTitleBullet/IconAndTitleBullet";
 
 const FeatureBullets = ({
   bulletType,
