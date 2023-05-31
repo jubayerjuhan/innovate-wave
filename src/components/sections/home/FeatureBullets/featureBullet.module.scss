@@ -11,7 +11,8 @@
 .bullet {
   gap: $gap-md;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 50px auto;
+  // align-items: center;
 }
 
 .bullet:nth-child(even) {

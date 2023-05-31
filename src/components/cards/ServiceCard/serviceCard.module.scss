@@ -37,3 +37,9 @@
   line-height: 1.4;
   margin-bottom: $margin-md;
 }
+
+@media (max-width: 576px) {
+  .serviceCard {
+    padding: $padding-md;
+  }
+}
