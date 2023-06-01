@@ -1,11 +1,11 @@
 import React from "react";
 import predefinedStyles from "../../../../styles/predefined.module.scss";
 import styles from "./testimonials.module.scss";
-import FeattureSubheading from "@/components/ui/FeatureSubheading/FeattureSubheading";
 import TestimonialCard from "@/components/cards/TestimonialCard/TestimonialCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SeactionHeading from "@/components/headings/SectionHeading/SeactionHeading";
 
 const Testimonial = () => {
   var settings = {
@@ -48,10 +48,11 @@ const Testimonial = () => {
   ];
   return (
     <div className={`${predefinedStyles.sectionPadding}`}>
-      <div className={styles.testimonialSectionHeading}>
-        <FeattureSubheading title="Testimonials" />
-        <h2 className={styles.heading}>Valuable feedback from our clients</h2>
-      </div>
+      <SeactionHeading
+        title={"Valuable feedback from our clients"}
+        subtitle="Testimonial"
+        orientation="left"
+      />
       <Slider
         {...settings}
         autoplay

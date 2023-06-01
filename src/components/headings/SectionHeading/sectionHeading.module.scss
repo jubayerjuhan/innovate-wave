@@ -1,0 +1,24 @@
+@import "../../../styles/globals.scss";
+
+.heading {
+  font-size: $font-size-heading-lg;
+  padding: $padding-xl 0px;
+}
+
+.sectionHeading {
+  display: block;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $padding-sm 0;
+}
+
+@media (max-width: 992px) {
+  .heading {
+    font-size: $font-size-heading-md;
+    padding: $padding-lg 0px;
+  }
+}
