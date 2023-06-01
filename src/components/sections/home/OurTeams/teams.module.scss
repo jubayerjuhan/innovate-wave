@@ -1,2 +1,15 @@
+@import "../../../../styles/globals.scss";
+
 .teamMembers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: calc($gap-xl + $gap-xl) $gap-lg;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .teamMembers {
+    gap: calc($gap-xl + $gap-xl) $gap-xl;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
 }
