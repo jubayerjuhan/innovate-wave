@@ -1,9 +1,5 @@
 @import "../../../styles/globals.scss";
 
-.testimonialCard {
-  max-width: 600px;
-}
-
 .client {
   display: flex;
   align-items: center;
@@ -32,7 +28,7 @@
 
 .testimonialBody {
   margin-top: $margin-lg;
-  padding: $padding-xl calc($padding-xl + 10px);
+  padding: $padding-xl;
   background: $secondary-color;
   border-radius: 15px;
   color: $white-color;
@@ -43,12 +39,9 @@
     font-weight: $font-weight-bold;
     margin-bottom: $margin-sm;
     position: relative;
-
-    .testimonialIcon {
-      position: absolute;
-      left: -$padding-lg;
-      top: 5px;
-    }
+    display: flex;
+    align-items: center;
+    gap: $gap-sm;
   }
 
   .description {
@@ -62,4 +55,16 @@
   z-index: 10;
   top: -18px;
   left: calc($padding-lg + 10px);
+}
+
+@media (max-width: 992px) {
+  .testimonialBody {
+    padding: $padding-lg;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonialBody {
+    padding: $padding-md;
+  }
 }
