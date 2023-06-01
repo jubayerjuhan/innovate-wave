@@ -18,7 +18,7 @@ const TestimonialCard = () => {
         <div className={styles.clientInfo}>
           <p className={styles.clientName}>Jubayer Juhan</p>
           <p className={styles.clientCompany}>
-            <span className={styles.clientRole}>CEO - </span>
+            <span className={styles.clientRole}>CTO - </span>
             Digital Dude LLC
           </p>
         </div>
