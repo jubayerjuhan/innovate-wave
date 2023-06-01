@@ -12,6 +12,6 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")],
   },
   images: {
-    domains: ["wp.devignedge.com"],
+    domains: ["wp.devignedge.com", "avatars.githubusercontent.com"],
   },
 };

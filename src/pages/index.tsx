@@ -2,6 +2,7 @@ import FeatureWithImageSection from "@/components/sections/home/FeatureWithImage
 import Herosection from "@/components/sections/home/Herosection/Herosection";
 import OurClients from "@/components/sections/home/OurClients/OurClients";
 import OurServices from "@/components/sections/home/OurServices/OurServices";
+import Testimonial from "@/components/sections/home/Testimonial/Testimonial";
 import Navbar from "@/components/ui/Navbar/Navbar";
 import PageWrapper from "@/components/wrappers/PageWrapper/PageWrapper";
 import {
@@ -29,6 +30,7 @@ export default function Home() {
         />
       ))}
       <OurServices />
+      <Testimonial />
     </PageWrapper>
   );
 }

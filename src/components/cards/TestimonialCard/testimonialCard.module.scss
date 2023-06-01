@@ -1,0 +1,65 @@
+@import "../../../styles/globals.scss";
+
+.testimonialCard {
+  max-width: 600px;
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  gap: $gap-sm;
+  padding: 0 $padding-lg;
+
+  .clientImage {
+    border-radius: 40px;
+  }
+
+  .clientName {
+    font-size: $font-size-xl;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  .clientRole {
+    font-size: $font-size-md;
+    font-weight: $font-weight-semibold;
+  }
+
+  .clientCompany {
+    font-size: $font-size-md;
+  }
+}
+
+.testimonialBody {
+  margin-top: $margin-lg;
+  padding: $padding-xl calc($padding-xl + 10px);
+  background: $secondary-color;
+  border-radius: 15px;
+  color: $white-color;
+  position: relative;
+
+  .testimonialTitle {
+    font-size: calc($font-size-xxl + 4px);
+    font-weight: $font-weight-bold;
+    margin-bottom: $margin-sm;
+    position: relative;
+
+    .testimonialIcon {
+      position: absolute;
+      left: -$padding-lg;
+      top: 5px;
+    }
+  }
+
+  .description {
+    font-size: $font-size-description-lg;
+    line-height: 1.3;
+  }
+}
+
+.testimonialCallout {
+  position: absolute;
+  z-index: 10;
+  top: -18px;
+  left: calc($padding-lg + 10px);
+}
