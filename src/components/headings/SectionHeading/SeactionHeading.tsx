@@ -6,6 +6,7 @@ const SeactionHeading = ({
   subtitle,
   title,
   orientation,
+  description,
 }: SectionHeadingType) => {
   return (
     <div
@@ -15,6 +16,7 @@ const SeactionHeading = ({
     >
       <FeattureSubheading title={subtitle} />
       <h2 className={styles.heading}>{title}</h2>
+      {description && <p className={styles.description}>{description}</p>}
     </div>
   );
 };

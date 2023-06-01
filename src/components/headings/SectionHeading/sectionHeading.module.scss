@@ -2,11 +2,19 @@
 
 .heading {
   font-size: $font-size-heading-lg;
-  padding: $padding-xl 0px;
+  padding: $padding-lg 0px $padding-xl 0px;
+  color: $secondary-color;
 }
 
 .sectionHeading {
   display: block;
+}
+
+.description {
+  font-size: $font-size-xl;
+  line-height: 1.6;
+  width: 70%;
+  margin-bottom: $margin-lg;
 }
 
 .center {
@@ -14,11 +22,34 @@
   flex-direction: column;
   align-items: center;
   padding: $padding-sm 0;
+
+  .description {
+    text-align: center;
+  }
+
+  .heading {
+    text-align: center;
+  }
 }
 
 @media (max-width: 992px) {
   .heading {
     font-size: $font-size-heading-md;
     padding: $padding-lg 0px;
+  }
+
+  .description {
+    margin-bottom: $margin-md;
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: $font-size-heading-sm;
+  }
+  .description {
+    width: 100%;
+    font-size: $font-size-description;
   }
 }
