@@ -1,0 +1,88 @@
+@import "../../../styles/globals.scss";
+
+.teamBox {
+  border-radius: 20px;
+  max-width: 350px;
+  position: relative;
+
+  .image {
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+}
+
+.nameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nameWrapper {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -40px;
+  left: 5%;
+  height: 80px;
+  width: 90%;
+  border-radius: 20px;
+  padding: $padding-md 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 300ms ease;
+  display: flex;
+
+  .name {
+    font-size: $font-size-xxl;
+    font-weight: $font-weight-semibold;
+    color: $secondary-color;
+  }
+
+  .designation {
+    font-size: $font-size-description-lg;
+    font-weight: $font-weight-semibold;
+    color: $secondary-color;
+    opacity: 0;
+    height: 0px;
+    transition: all 300ms ease;
+  }
+
+  .socialMedia {
+    opacity: 0;
+    height: 0px;
+    transition: all 500ms ease;
+    display: flex;
+    gap: calc($gap-md);
+
+    svg {
+      font-size: 25px;
+      color: $primary-color;
+      cursor: pointer;
+    }
+  }
+
+  &:hover {
+    .nameContainer {
+      gap: calc($gap-sm);
+    }
+    transition: all 300ms ease;
+    height: 150px;
+
+    /* height: unset; */
+    .designation {
+      opacity: 1;
+      height: 20px;
+      display: block;
+    }
+    .socialMedia {
+      margin-top: calc($gap-sm + 5px);
+      opacity: 1;
+      height: auto;
+    }
+  }
+}
