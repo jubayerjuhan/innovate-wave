@@ -5,11 +5,14 @@
   padding: $padding-lg 0px;
 }
 
+.testimonialSectionHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $padding-sm 0;
+}
 .testimonialContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  flex-wrap: wrap;
+  display: flex;
 }
 
 .testimonialWrapper {

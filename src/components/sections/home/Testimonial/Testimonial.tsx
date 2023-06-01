@@ -47,9 +47,11 @@ const Testimonial = () => {
     { message: "gello" },
   ];
   return (
-    <div className={predefinedStyles.sectionPadding}>
-      <FeattureSubheading title="Testimonials" />
-      <h2 className={styles.heading}>Valuable feedback from our clients</h2>
+    <div className={`${predefinedStyles.sectionPadding}`}>
+      <div className={styles.testimonialSectionHeading}>
+        <FeattureSubheading title="Testimonials" />
+        <h2 className={styles.heading}>Valuable feedback from our clients</h2>
+      </div>
       <Slider
         {...settings}
         autoplay
