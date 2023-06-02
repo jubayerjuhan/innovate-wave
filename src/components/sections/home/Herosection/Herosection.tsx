@@ -4,8 +4,10 @@ import Image from "next/image";
 import heroImage from "../../../../assets/heroImage.png";
 import TextBlock from "@/components/ui/Text/TextBlock/TextBlock";
 import styles from "./herosection.module.scss";
+import { HeroSection } from "@/types/homepage/heroSection";
+import { HerosectionProps } from "./types";
 
-const Herosection = () => {
+const Herosection = ({}: HerosectionProps) => {
   return (
     <div className={styles.heroSection}>
       <div className={styles.infoSection}>

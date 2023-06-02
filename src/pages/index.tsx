@@ -1,3 +1,4 @@
+import { client } from "@/client/client";
 import FeatureWithImageSection from "@/components/sections/home/FeatureWithImageSection/FeatureWithImageSection";
 import Herosection from "@/components/sections/home/Herosection/Herosection";
 import OurClients from "@/components/sections/home/OurClients/OurClients";
@@ -10,13 +11,14 @@ import {
   featureBulletsData,
   homepageFeatures,
 } from "@/constants/pageData/home/home";
+import { HomepageType } from "@/types/homepage/homapage";
 import { reverse } from "dns";
 
-export default function Home() {
+export default function Home({ heroSection }: HomepageType) {
   return (
     <PageWrapper>
       <Navbar />
-      <Herosection />
+      <Herosection herosection={heroSection} />
       <OurClients />
       {homepageFeatures.map((feature, key) => (
         <FeatureWithImageSection
@@ -35,4 +37,15 @@ export default function Home() {
       <OurTeams />
     </PageWrapper>
   );
+}
+
+// Server Side Props
+export async function getServerSideProps() {
+  try {
+    const query = `*[_type == 'homepage'][0]`;
+    const result = await client.fetch(query);
+    return { props: result };
+  } catch (error) {
+    return error;
+  }
 }
