@@ -15,6 +15,7 @@ import { HomepageType } from "@/types/homepage/homapage";
 import { reverse } from "dns";
 
 export default function Home({ heroSection }: HomepageType) {
+  console.log(heroSection);
   return (
     <PageWrapper>
       <Navbar />
