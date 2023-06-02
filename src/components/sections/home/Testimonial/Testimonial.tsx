@@ -51,7 +51,7 @@ const Testimonial = () => {
       <SeactionHeading
         title={"Valuable feedback from our clients"}
         subtitle="Testimonial"
-        orientation="left"
+        orientation="middle"
       />
       <Slider
         {...settings}
