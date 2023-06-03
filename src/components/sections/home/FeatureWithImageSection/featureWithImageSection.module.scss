@@ -37,11 +37,18 @@
 }
 
 .imageSection {
+  position: relative;
   flex-basis: calc(50% - $gap-lg/2);
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  img {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    object-fit: contain;
+  }
 }
 
 .imgReverse {
@@ -49,24 +56,18 @@
   align-items: center;
 }
 
-.featureImage {
-  width: 85%;
-  object-fit: contain;
-}
-
 // iPad air and small laptop
 @media (max-width: 992px) {
   .featureSection {
+    min-height: unset;
     flex-direction: column;
     padding: $padding-xl $padding-xl;
+    height: 100%;
   }
 
   .imageSection {
     justify-content: center;
-  }
-
-  .featureImage {
-    width: 70%;
+    width: 100%;
   }
 
   .rowColReverse {

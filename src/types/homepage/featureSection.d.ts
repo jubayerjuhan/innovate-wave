@@ -7,7 +7,9 @@ export interface FeatureSection {
     };
   };
   subtitle: string;
+  reverse: boolean;
   _type: string;
+  bulletType: "iconOnly" | "iconAndTitle";
   bulletPoints: {
     _type: string;
     description: string;

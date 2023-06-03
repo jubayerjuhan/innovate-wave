@@ -7,32 +7,36 @@ import OurTeams from "@/components/sections/home/OurTeams/OurTeams";
 import Testimonial from "@/components/sections/home/Testimonial/Testimonial";
 import Navbar from "@/components/ui/Navbar/Navbar";
 import PageWrapper from "@/components/wrappers/PageWrapper/PageWrapper";
-import {
-  featureBulletsData,
-  homepageFeatures,
-} from "@/constants/pageData/home/home";
+import sanityImage from "@/lib/sanity/imageBuilder";
 import { HomepageType } from "@/types/homepage/homapage";
-import { reverse } from "dns";
 
-export default function Home({ heroSection, ourClients }: HomepageType) {
+export default function Home({
+  heroSection,
+  ourClients,
+  featureSections,
+}: HomepageType) {
   console.log(heroSection);
+  console.log(featureSections, "featuresections");
   return (
     <PageWrapper>
       <Navbar />
       <Herosection herosection={heroSection} />
       <OurClients ourClients={ourClients} />
-      {homepageFeatures.map((feature, key) => (
-        <FeatureWithImageSection
-          bulletType={feature.bulletType}
-          bullets={feature.bullets}
-          reverse={feature.reverse}
-          key={key}
-          image={feature.image}
-          heading={feature.heading}
-          subHeading={feature.subHeading}
-          description={feature.description}
-        />
-      ))}
+      {featureSections.map((feature, key) => {
+        console.log(feature, "feature");
+        return (
+          <FeatureWithImageSection
+            bulletType={feature.bulletType}
+            bullets={feature.bulletPoints}
+            reverse={feature.reverse}
+            key={key}
+            image={sanityImage(feature.image).url()}
+            heading={feature.title}
+            subHeading={feature.subtitle}
+            description={feature.description}
+          />
+        );
+      })}
       <OurServices />
       <Testimonial />
       <OurTeams />

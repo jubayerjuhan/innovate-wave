@@ -5,14 +5,14 @@ export interface FeatureSectionProps {
   reverse?: boolean;
   bulletType: "iconAndTitle" | "iconOnly";
   bullets: Bullet[];
-  image: StaticImageData;
+  image: string;
   heading: string;
   subHeading: string;
   description: string;
 }
 
 export interface Bullet {
-  icon: IconType;
+  icon?: IconType;
   title: string;
   description: string;
 }

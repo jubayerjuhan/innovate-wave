@@ -30,7 +30,7 @@ const FeatureWithImageSection = ({
         <Button size="large" title="Get Started Now" />
       </div>
       <div className={`${styles.imageSection} ${reverse && styles.imgReverse}`}>
-        <Image src={image} alt="Hero Image" className={styles.featureImage} />
+        <img src={image} alt="Hero Image" className={styles.featureImage} />
       </div>
     </div>
   );

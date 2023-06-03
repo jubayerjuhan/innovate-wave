@@ -32,7 +32,7 @@ const IconAndTitleBullet = ({ Icon, type, bullet }: any) => {
   return (
     <div className={styles.bullet}>
       <div className={styles.iconWrapper}>
-        <Icon className={styles.icon} />
+        {/* <Icon className={styles.icon} /> */}
       </div>
       <div className={styles.bulletBody}>
         {type !== "iconOnly" && (
