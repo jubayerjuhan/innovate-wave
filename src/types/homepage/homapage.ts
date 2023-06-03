@@ -1,3 +1,4 @@
+import { TestimonialSection } from "@/components/sections/home/Testimonial/types";
 import { FeatureSection } from "./featureSection";
 import { HeroSection } from "./heroSection";
 import { OurClients } from "./ourClients";
@@ -8,6 +9,7 @@ export interface HomepageType {
   featureSections: FeatureSection[];
   ourClients: OurClients[];
   ourServices: OurServices;
+  testimonialSection: TestimonialSection;
   _id: string;
   _updatedAt: string;
   _createdAt: string;

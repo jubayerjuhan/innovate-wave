@@ -15,9 +15,8 @@ export default function Home({
   ourClients,
   featureSections,
   ourServices,
+  testimonialSection,
 }: HomepageType) {
-  console.log(heroSection);
-  console.log(featureSections, "featuresections");
   return (
     <PageWrapper>
       <Navbar />
@@ -39,7 +38,7 @@ export default function Home({
         );
       })}
       <OurServices ourServices={ourServices} />
-      <Testimonial />
+      <Testimonial testimonialSection={testimonialSection} />
       <OurTeams />
     </PageWrapper>
   );

@@ -6,8 +6,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SeactionHeading from "@/components/headings/SectionHeading/SeactionHeading";
+import { TestimonialSection, TestimonialSectionProps } from "./types";
 
-const Testimonial = () => {
+const Testimonial = ({ testimonialSection }: TestimonialSectionProps) => {
+  console.log(testimonialSection, "ttm");
   var settings = {
     dots: true,
     infinite: true,
@@ -60,9 +62,9 @@ const Testimonial = () => {
         autoplaySpeed={3000}
         accessibility={true}
       >
-        {items.map((item, key) => (
+        {testimonialSection.testimonials.map((testimonial, key) => (
           <div key={key} className={styles.testimonialWrapper}>
-            <TestimonialCard />
+            <TestimonialCard testimonial={testimonial} />
           </div>
         ))}
       </Slider>
