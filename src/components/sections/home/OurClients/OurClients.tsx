@@ -6,6 +6,9 @@ import clientLogo_2 from "../../../../assets/clientsLogo/logo-21.svg";
 import clientLogo_3 from "../../../../assets/clientsLogo/logo-31.svg";
 import clientLogo_4 from "../../../../assets/clientsLogo/logo-41.svg";
 import clientLogo_5 from "../../../../assets/clientsLogo/logo-51.svg";
+import { OurClientsProps } from "./types";
+import Image from "next/image";
+import sanityImage from "@/lib/sanity/imageBuilder";
 
 const items = [
   { src: clientLogo_1, alt: "Client" },
@@ -15,10 +18,12 @@ const items = [
   { src: clientLogo_5, alt: "Client" },
 ];
 
-const OurClients = () => {
+const OurClients = ({ ourClients }: OurClientsProps) => {
+  console.log(ourClients, "ourClients...");
+
   return (
     <div>
-      <LogoSlider />
+      <LogoSlider ourClients={ourClients} />
     </div>
   );
 };

@@ -3,25 +3,16 @@ import Slider from "react-slick";
 import Image from "next/image";
 import styles from "./logoSlider.module.scss";
 import predefinedStyles from "../../../styles/predefined.module.scss";
+import { OurClients } from "@/types/homepage/ourClients";
+import sanityImage from "@/lib/sanity/imageBuilder";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
-import clientLogo_1 from "../../../assets/clientsLogo/logo-11.svg";
-import clientLogo_2 from "../../../assets/clientsLogo/logo-21.svg";
-import clientLogo_3 from "../../../assets/clientsLogo/logo-31.svg";
-import clientLogo_4 from "../../../assets/clientsLogo/logo-41.svg";
-import clientLogo_5 from "../../../assets/clientsLogo/logo-51.svg";
-import FeattureSubheading from "@/components/ui/FeatureSubheading/FeattureSubheading";
-
-const items = [
-  { src: clientLogo_1, alt: "Client" },
-  { src: clientLogo_2, alt: "Client" },
-  { src: clientLogo_3, alt: "Client" },
-  { src: clientLogo_4, alt: "Client" },
-  { src: clientLogo_5, alt: "Client" },
-];
-
-export default function SimpleSlider() {
+export default function SimpleSlider({
+  ourClients,
+}: {
+  ourClients: OurClients[];
+}) {
   var settings = {
     dots: true,
     infinite: true,
@@ -56,15 +47,21 @@ export default function SimpleSlider() {
     <div className={`${predefinedStyles.sectionPadding} ${styles.slider}`}>
       {/* <FeattureSubheading title="Our Clients" className={styles.subheading} /> */}
       <Slider {...settings} autoplay autoplaySpeed={3000} dots={false}>
-        {items.map((logo, index) => (
+        {ourClients.map((client, index) => (
           <div
             key={index}
             className={styles.slide}
-            style={{ display: "flex", justifyContent: "center" }}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
           >
             <Image
-              src={logo.src}
+              src={sanityImage(client.logo).url()}
               alt="Client Logo"
+              width={230}
+              height={60}
               className={styles.clientLogo}
             />
           </div>

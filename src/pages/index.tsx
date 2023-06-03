@@ -14,13 +14,13 @@ import {
 import { HomepageType } from "@/types/homepage/homapage";
 import { reverse } from "dns";
 
-export default function Home({ heroSection }: HomepageType) {
+export default function Home({ heroSection, ourClients }: HomepageType) {
   console.log(heroSection);
   return (
     <PageWrapper>
       <Navbar />
       <Herosection herosection={heroSection} />
-      <OurClients />
+      <OurClients ourClients={ourClients} />
       {homepageFeatures.map((feature, key) => (
         <FeatureWithImageSection
           bulletType={feature.bulletType}

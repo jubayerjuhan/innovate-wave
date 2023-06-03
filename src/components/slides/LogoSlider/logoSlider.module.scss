@@ -11,3 +11,10 @@
   display: flex !important;
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .slider {
+    margin-bottom: 0px;
+    margin: $margin-lg;
+  }
+}
