@@ -14,6 +14,7 @@ export default function Home({
   heroSection,
   ourClients,
   featureSections,
+  ourServices,
 }: HomepageType) {
   console.log(heroSection);
   console.log(featureSections, "featuresections");
@@ -37,7 +38,7 @@ export default function Home({
           />
         );
       })}
-      <OurServices />
+      <OurServices ourServices={ourServices} />
       <Testimonial />
       <OurTeams />
     </PageWrapper>

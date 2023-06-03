@@ -3,20 +3,20 @@ import React from "react";
 import predefinedDesign from "../../../../styles/predefined.module.scss";
 import styles from "./ourServices.module.scss";
 import SeactionHeading from "@/components/headings/SectionHeading/SeactionHeading";
+import { OurServicesProps } from "./types";
 
-const OurServices = () => {
+const OurServices = ({ ourServices }: OurServicesProps) => {
   return (
     <div className={`${predefinedDesign.sectionPadding} ${styles.ourServices}`}>
       <SeactionHeading
         orientation="middle"
-        title="Services That We Provide"
-        subtitle="Our Services"
+        title={ourServices.title}
+        subtitle={ourServices.subtitle}
       />
       <div className={styles.serviceCardWrapper}>
-        <ServiceCard />
-        <ServiceCard />
-        <ServiceCard />
-        <ServiceCard />
+        {ourServices.services.map((service, index) => {
+          return <ServiceCard service={service} key={index} />;
+        })}
       </div>
     </div>
   );

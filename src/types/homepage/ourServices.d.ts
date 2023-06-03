@@ -1,11 +1,11 @@
 export interface OurServices {
-  services: Services[];
+  services: Service[];
   title: string;
   subtitle: string;
   description: string;
 }
 
-interface Services {
+export interface Service {
   title: string;
   _type: string;
   link: string;

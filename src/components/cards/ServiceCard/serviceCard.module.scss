@@ -9,22 +9,25 @@
   border-radius: 8px;
 }
 
-.icon {
-  border: 1px solid red;
-  // padding: calc($padding-xs + 5px);
-  border: 1px solid $secondary-color;
-  border-radius: 5px;
+.iconWrapper {
   margin-bottom: $margin-sm;
-  height: 75px;
-  width: 75px;
+  border: 1px solid $secondary-color;
+  padding: 10px;
+  border-radius: 5px;
+}
+.icon {
+  border-radius: 5px;
+  height: 60px;
+  width: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
 
-  img {
-    height: 50px;
-    width: 50px;
-  }
+.iconImage {
+  width: 100%;
+  object-fit: contain;
 }
 
 .title {
