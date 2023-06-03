@@ -4,6 +4,7 @@ import styles from "./button.module.scss";
 
 const Button = ({
   title,
+  color,
   variant = "primary",
   size = "medium",
 }: ButtonProps) => {
@@ -21,7 +22,9 @@ const Button = ({
     buttonClasses += ` ${styles.largeButton}`;
   }
   return (
-    <button className={buttonClasses}>
+    <button
+      className={`${buttonClasses} ${color === "orange" && styles.orangeColor}`}
+    >
       <p>{title}</p>
       <BsArrowRight />
     </button>

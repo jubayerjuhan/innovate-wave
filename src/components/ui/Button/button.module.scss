@@ -15,10 +15,14 @@
   display: flex;
   gap: $gap-sm;
   align-items: center;
-
+  background-color: $primary-color;
   &:hover {
     background-color: $secondary-color;
   }
+}
+
+.orangeColor {
+  background-color: $orange-color;
 }
 
 .secondaryButton {

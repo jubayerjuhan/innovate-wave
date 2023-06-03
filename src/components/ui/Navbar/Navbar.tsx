@@ -31,7 +31,12 @@ const Navbar = () => {
             {navlink.name}
           </li>
         ))}
-        <Button title="Get Started Now" variant="primary" size="medium" />
+        <Button
+          title="Get Started Now"
+          variant="primary"
+          size="medium"
+          color="orange"
+        />
       </ul>
     </nav>
   );
