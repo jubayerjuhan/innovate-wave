@@ -1,4 +1,5 @@
 import React from "react";
+import { BsArrowRight } from "react-icons/bs";
 import styles from "./button.module.scss";
 
 const Button = ({
@@ -19,7 +20,12 @@ const Button = ({
   } else if (size === "large") {
     buttonClasses += ` ${styles.largeButton}`;
   }
-  return <button className={buttonClasses}>{title}</button>;
+  return (
+    <button className={buttonClasses}>
+      <p>{title}</p>
+      <BsArrowRight />
+    </button>
+  );
 };
 
 export default Button;
