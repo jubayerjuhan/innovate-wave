@@ -16,6 +16,7 @@ export default function Home({
   featureSections,
   ourServices,
   testimonialSection,
+  ourTeamsSection,
 }: HomepageType) {
   return (
     <PageWrapper>
@@ -39,7 +40,7 @@ export default function Home({
       })}
       <OurServices ourServices={ourServices} />
       <Testimonial testimonialSection={testimonialSection} />
-      <OurTeams />
+      <OurTeams ourTeamsSection={ourTeamsSection} />
     </PageWrapper>
   );
 }
@@ -49,6 +50,7 @@ export async function getServerSideProps() {
   try {
     const query = `*[_type == 'homepage'][0]`;
     const result = await client.fetch(query);
+    console.log(result, "res...");
     return { props: result };
   } catch (error) {
     return error;

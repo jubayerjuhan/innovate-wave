@@ -1,3 +1,4 @@
+import { OurTeamsSection } from "./../../components/sections/home/OurTeams/types.d";
 import { TestimonialSection } from "@/components/sections/home/Testimonial/types";
 import { FeatureSection } from "./featureSection";
 import { HeroSection } from "./heroSection";
@@ -10,6 +11,7 @@ export interface HomepageType {
   ourClients: OurClients[];
   ourServices: OurServices;
   testimonialSection: TestimonialSection;
+  ourTeamsSection: OurTeamsSection;
   _id: string;
   _updatedAt: string;
   _createdAt: string;
