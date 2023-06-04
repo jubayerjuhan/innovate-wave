@@ -12,7 +12,7 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
       <Image
         src={sanityImage(teamMember.image).url()}
         alt={teamMember.teamMemberName}
-        width={350}
+        width={340}
         height={400}
         className={styles.image}
       />

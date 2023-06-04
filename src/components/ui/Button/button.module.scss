@@ -42,12 +42,12 @@
 
 .largerButton {
   padding: calc($padding-md) calc($padding-lg + 40px);
-  font-size: $font-size-lg;
+  font-size: $font-size-xxl;
 }
 
 @media (max-width: 768px) {
   .largerButton {
-    padding: calc($padding-sm) calc($padding-md);
+    padding: calc($padding-sm) calc($padding-sm);
     font-size: $font-size-lg;
   }
 }
