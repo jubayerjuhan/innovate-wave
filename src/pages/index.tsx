@@ -1,4 +1,5 @@
 import { client } from "@/client/client";
+import ContactUsNewsLetter from "@/components/newsletters/ContactUsNewsLetter/ContactUsNewsLetter";
 import FeatureWithImageSection from "@/components/sections/home/FeatureWithImageSection/FeatureWithImageSection";
 import Herosection from "@/components/sections/home/Herosection/Herosection";
 import OurClients from "@/components/sections/home/OurClients/OurClients";
@@ -41,6 +42,7 @@ export default function Home({
       <OurServices ourServices={ourServices} />
       <Testimonial testimonialSection={testimonialSection} />
       <OurTeams ourTeamsSection={ourTeamsSection} />
+      <ContactUsNewsLetter />
     </PageWrapper>
   );
 }

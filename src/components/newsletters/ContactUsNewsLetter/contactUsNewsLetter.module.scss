@@ -1,0 +1,68 @@
+@import "../../../styles/globals.scss";
+
+.newslettersWrapper {
+  display: flex;
+  background-color: $primary-color;
+  justify-content: center;
+  padding: $padding-xl;
+  margin-top: $margin-xl;
+}
+
+.newsletters {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.newslettersText {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-md;
+  color: $white-color;
+
+  h3 {
+    font-size: $font-size-body;
+    font-weight: $font-weight-light;
+    letter-spacing: 1.5px;
+  }
+  h5 {
+    font-size: $font-size-heading-sm;
+    // font-weight: $font-weight-light;
+  }
+}
+
+@media (max-width: 992px) {
+  .newslettersWrapper {
+    padding: $padding-xl $padding-xl;
+  }
+
+  .newsletters {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .newslettersWrapper {
+    padding: $padding-md;
+  }
+
+  .newsletters {
+    width: 100%;
+  }
+
+  .newslettersText {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+    color: $white-color;
+
+    h3 {
+      font-size: $font-size-sm;
+      font-weight: $font-weight-light;
+      letter-spacing: 1.5px;
+    }
+    h5 {
+      font-size: $font-size-xxl;
+      // font-weight: $font-weight-light;
+    }
+  }
+}

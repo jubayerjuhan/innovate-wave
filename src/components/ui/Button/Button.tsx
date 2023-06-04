@@ -20,6 +20,8 @@ const Button = ({
     buttonClasses += ` ${styles.button}`;
   } else if (size === "large") {
     buttonClasses += ` ${styles.largeButton}`;
+  } else if (size === "larger") {
+    buttonClasses += ` ${styles.largerButton}`;
   }
   return (
     <button
