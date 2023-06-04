@@ -23,5 +23,6 @@ export interface TestimonialSection {
   title: string;
   subtitle: string;
   description: string;
+  orientation: "left" | "middle";
   testimonials: Testimonial[];
 }

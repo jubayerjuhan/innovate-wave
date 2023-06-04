@@ -51,9 +51,9 @@ const Testimonial = ({ testimonialSection }: TestimonialSectionProps) => {
   return (
     <div className={`${predefinedStyles.sectionPadding}`}>
       <SeactionHeading
-        title={"Valuable feedback from our clients"}
-        subtitle="Testimonial"
-        orientation="middle"
+        title={testimonialSection.title}
+        subtitle={testimonialSection.subtitle}
+        orientation={testimonialSection.orientation}
       />
       <Slider
         {...settings}
