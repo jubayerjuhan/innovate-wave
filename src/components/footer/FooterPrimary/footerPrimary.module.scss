@@ -1,0 +1,50 @@
+@import "../../../styles/globals.scss";
+
+.footerWrapper {
+  padding: $padding-xl;
+  background-color: $text-color;
+}
+
+.footer {
+  display: grid;
+  gap: $gap-xl;
+  grid-template-columns: 2fr repeat(3, 1fr);
+
+  .infoSection {
+    .logo {
+      background-color: $text-color;
+      position: relative;
+      width: 300px;
+      height: 110px;
+      img {
+        background-color: $text-color;
+      }
+    }
+  }
+
+  .aboutCompany {
+    margin-top: $margin-md;
+    font-size: $font-size-sm;
+    color: $white-color;
+  }
+}
+
+.footerLinksWrappper {
+  margin-top: $margin-sm;
+  color: $white-color;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-md;
+
+  .footerLinkTitle {
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-xxl;
+    margin-bottom: $margin-sm;
+    position: relative;
+  }
+
+  .footerLink {
+    cursor: pointer;
+    font-size: $font-size-lg;
+  }
+}

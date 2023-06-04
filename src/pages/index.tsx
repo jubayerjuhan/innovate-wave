@@ -1,4 +1,5 @@
 import { client } from "@/client/client";
+import FooterPrimary from "@/components/footer/FooterPrimary/FooterPrimary";
 import ContactUsNewsLetter from "@/components/newsletters/ContactUsNewsLetter/ContactUsNewsLetter";
 import FeatureWithImageSection from "@/components/sections/home/FeatureWithImageSection/FeatureWithImageSection";
 import Herosection from "@/components/sections/home/Herosection/Herosection";
@@ -43,6 +44,7 @@ export default function Home({
       <Testimonial testimonialSection={testimonialSection} />
       <OurTeams ourTeamsSection={ourTeamsSection} />
       <ContactUsNewsLetter />
+      <FooterPrimary />
     </PageWrapper>
   );
 }
