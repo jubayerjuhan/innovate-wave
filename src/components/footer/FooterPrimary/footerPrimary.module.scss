@@ -73,3 +73,27 @@
     }
   }
 }
+@media (max-width: 562px) {
+  .footerWrapper {
+    padding: $padding-md;
+  }
+
+  .footer {
+    .aboutCompany {
+      font-size: $font-size-md;
+      line-height: 2;
+      color: $white-color;
+    }
+  }
+
+  .footerLinksWrappper {
+    .footerLinkTitle {
+      font-size: $font-size-heading-sm;
+    }
+
+    .footerLink {
+      font-size: $font-size-xl;
+      width: fit-content;
+    }
+  }
+}
