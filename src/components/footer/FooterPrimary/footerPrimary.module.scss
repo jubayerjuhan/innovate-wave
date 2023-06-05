@@ -48,3 +48,28 @@
     font-size: $font-size-lg;
   }
 }
+
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+
+    .aboutCompany {
+      margin-top: $margin-md;
+      font-size: $font-size-xl;
+      line-height: 2;
+      color: $white-color;
+    }
+  }
+
+  .footerLinksWrappper {
+    .footerLinkTitle {
+      font-weight: $font-weight-semibold;
+      font-size: $font-size-heading-sm;
+    }
+
+    .footerLink {
+      cursor: pointer;
+      font-size: $font-size-xxl;
+    }
+  }
+}
