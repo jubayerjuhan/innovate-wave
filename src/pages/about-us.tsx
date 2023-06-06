@@ -1,10 +1,15 @@
 import client from "@/client/client";
 import { Footer } from "@/components/footer/FooterPrimary/types";
+import PageHeading from "@/components/headings/PageHeading/PageHeading";
 import PageWrapper from "@/components/wrappers/PageWrapper/PageWrapper";
 import React from "react";
 
 const AboutUs = ({ footer }: { footer: Footer }) => {
-  return <PageWrapper footer={footer}></PageWrapper>;
+  return (
+    <PageWrapper footer={footer}>
+      <PageHeading />
+    </PageWrapper>
+  );
 };
 
 export default AboutUs;
