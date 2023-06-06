@@ -17,9 +17,10 @@ export default function Home({
   ourServices,
   testimonialSection,
   ourTeamsSection,
+  footer,
 }: HomepageType) {
   return (
-    <PageWrapper>
+    <PageWrapper footer={footer}>
       <Herosection herosection={heroSection} />
       <OurClients ourClients={ourClients} />
       {featureSections.map((feature, key) => {
@@ -49,8 +50,12 @@ export default function Home({
 export async function getServerSideProps() {
   try {
     const query = `*[_type == 'homepage'][0]`;
+    const footerQuery = `*[_type == 'footer'][0]`;
     const result = await client.fetch(query);
-    return { props: result };
+    const footerResult = await client.fetch(footerQuery);
+
+    console.log(footerResult, "footerRes...");
+    return { props: { ...result, footer: footerResult } };
   } catch (error) {
     return error;
   }

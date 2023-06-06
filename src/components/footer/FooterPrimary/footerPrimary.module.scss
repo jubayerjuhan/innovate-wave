@@ -46,6 +46,8 @@
   .footerLink {
     cursor: pointer;
     font-size: $font-size-lg;
+    text-decoration: none;
+    color: $white-color;
   }
 }
 

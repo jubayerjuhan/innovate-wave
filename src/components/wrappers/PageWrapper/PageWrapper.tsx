@@ -1,13 +1,14 @@
 import FooterPrimary from "@/components/footer/FooterPrimary/FooterPrimary";
 import Navbar from "@/components/ui/Navbar/Navbar";
 import React from "react";
+import { PageWrapperProps } from "./types";
 
-const PageWrapper = ({ children }: PageWrapperProps) => {
+const PageWrapper = ({ children, footer }: PageWrapperProps) => {
   return (
     <main>
       <Navbar />
       {children}
-      <FooterPrimary />
+      <FooterPrimary footer={footer} />
     </main>
   );
 };

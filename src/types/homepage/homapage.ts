@@ -4,6 +4,7 @@ import { FeatureSection } from "./featureSection";
 import { HeroSection } from "./heroSection";
 import { OurClients } from "./ourClients";
 import { OurServices } from "./ourServices";
+import { Footer } from "@/components/footer/FooterPrimary/types";
 
 export interface HomepageType {
   heroSection: HeroSection;
@@ -12,6 +13,7 @@ export interface HomepageType {
   ourServices: OurServices;
   testimonialSection: TestimonialSection;
   ourTeamsSection: OurTeamsSection;
+  footer: Footer;
   _id: string;
   _updatedAt: string;
   _createdAt: string;

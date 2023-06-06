@@ -24,11 +24,12 @@ interface Asset {
 
 interface FooterLinkColumn {
   footerColumn: FooterColumn[];
+  footerColumnTitle: string;
 }
 
 interface FooterColumn {
-  footerColumnTitle: string;
-  footerLinks: FooterLink[];
+  footerLink: string;
+  footerLinkTitle: string;
 }
 
 interface FooterLink {

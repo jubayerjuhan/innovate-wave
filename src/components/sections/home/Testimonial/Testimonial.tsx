@@ -6,10 +6,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SeactionHeading from "@/components/headings/SectionHeading/SeactionHeading";
-import { TestimonialSection, TestimonialSectionProps } from "./types";
+import { TestimonialSectionProps } from "./types";
 
 const Testimonial = ({ testimonialSection }: TestimonialSectionProps) => {
-  console.log(testimonialSection, "ttm");
   var settings = {
     dots: true,
     infinite: true,
