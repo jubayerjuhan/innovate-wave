@@ -1,20 +1,23 @@
 import client from "@/client/client";
+import { Footer } from "@/components/footer/FooterPrimary/types";
 import PageWrapper from "@/components/wrappers/PageWrapper/PageWrapper";
 import React from "react";
 
-const AboutUs = () => {
-  return <PageWrapper></PageWrapper>;
+const AboutUs = ({ footer }: { footer: Footer }) => {
+  return <PageWrapper footer={footer}></PageWrapper>;
 };
 
 export default AboutUs;
 
+// Server Side Props
 export async function getServerSideProps() {
   try {
-    const footer = await client.fetch(`*[_type == 'homepage'][0].footer`);
-    console.log(footer, "footer...");
-    return { props: { footer } };
+    const footerQuery = `*[_type == 'footer'][0]`;
+    const footerResult = await client.fetch(footerQuery);
+
+    console.log(footerResult, "footerRes...");
+    return { props: { footer: footerResult } };
   } catch (error) {
-    console.error("Error fetching data from Sanity:", error);
-    return { props: { footer: null } };
+    return error;
   }
 }
