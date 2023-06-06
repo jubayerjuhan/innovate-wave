@@ -2,7 +2,7 @@
 import { createClient } from "@sanity/client";
 // import {createClient} from 'https://esm.sh/@sanity/client'
 
-export const client = createClient({
+export default createClient({
   projectId: "uykqua2c",
   dataset: "production",
   useCdn: true, // set to `false` to bypass the edge cache

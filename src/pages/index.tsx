@@ -1,5 +1,4 @@
-import { client } from "@/client/client";
-import FooterPrimary from "@/components/footer/FooterPrimary/FooterPrimary";
+import client from "@/client/client";
 import ContactUsNewsLetter from "@/components/newsletters/ContactUsNewsLetter/ContactUsNewsLetter";
 import FeatureWithImageSection from "@/components/sections/home/FeatureWithImageSection/FeatureWithImageSection";
 import Herosection from "@/components/sections/home/Herosection/Herosection";
@@ -7,7 +6,6 @@ import OurClients from "@/components/sections/home/OurClients/OurClients";
 import OurServices from "@/components/sections/home/OurServices/OurServices";
 import OurTeams from "@/components/sections/home/OurTeams/OurTeams";
 import Testimonial from "@/components/sections/home/Testimonial/Testimonial";
-import Navbar from "@/components/ui/Navbar/Navbar";
 import PageWrapper from "@/components/wrappers/PageWrapper/PageWrapper";
 import sanityImage from "@/lib/sanity/imageBuilder";
 import { HomepageType } from "@/types/homepage/homapage";
@@ -22,7 +20,6 @@ export default function Home({
 }: HomepageType) {
   return (
     <PageWrapper>
-      <Navbar />
       <Herosection herosection={heroSection} />
       <OurClients ourClients={ourClients} />
       {featureSections.map((feature, key) => {
@@ -44,7 +41,6 @@ export default function Home({
       <Testimonial testimonialSection={testimonialSection} />
       <OurTeams ourTeamsSection={ourTeamsSection} />
       <ContactUsNewsLetter />
-      <FooterPrimary />
     </PageWrapper>
   );
 }
@@ -54,7 +50,6 @@ export async function getServerSideProps() {
   try {
     const query = `*[_type == 'homepage'][0]`;
     const result = await client.fetch(query);
-    console.log(result, "res...");
     return { props: result };
   } catch (error) {
     return error;

@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./footerPrimary.module.scss";
 import logo from "../../../assets/Innovate Wave Logo White.png";
 import Image from "next/image";
 import TextBlock from "@/components/ui/Text/TextBlock/TextBlock";
+import client from "@/client/client";
 
-const FooterPrimary = () => {
+export default function FooterPrimary(props: any) {
+  console.log(props, "props...");
+  useEffect(() => {
+    getPosts();
+  }, []);
+
+  async function getPosts() {
+    const footer = await client.fetch(`*[_type == 'homepage'][0].footer`);
+    console.log(footer, "footer");
+  }
+
   return (
     <div className={styles.footerWrapper}>
       <div className={styles.footer}>
@@ -42,6 +53,14 @@ const FooterPrimary = () => {
       </div>
     </div>
   );
-};
+}
 
-export default FooterPrimary;
+export async function getServerSideProps() {
+  try {
+    const footer = await client.fetch(`*[_type == 'homepage'][0].footer`);
+    return { props: { footer } };
+  } catch (error) {
+    console.error("Error fetching data from Sanity:", error);
+    return { props: { footer: null } };
+  }
+}
