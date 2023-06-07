@@ -59,8 +59,10 @@
   .navbar {
     width: 100%;
     position: absolute;
+    z-index: 2;
     right: 0px;
     padding: $padding-sm;
+    background-color: $white-color;
 
     .menuIcon {
       display: block;

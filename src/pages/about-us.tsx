@@ -1,5 +1,4 @@
 import client from "@/client/client";
-import { Footer } from "@/components/footer/FooterPrimary/types";
 import PageHeading from "@/components/headings/PageHeading/PageHeading";
 import AboutUsServices from "@/components/sections/about-us/AboutUsServices";
 import PageWrapper from "@/components/wrappers/PageWrapper/PageWrapper";
