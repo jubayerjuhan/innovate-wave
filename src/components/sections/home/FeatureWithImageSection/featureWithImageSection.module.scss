@@ -1,7 +1,7 @@
 @import "../../../../styles/globals.scss";
 .featureSection {
   padding: $desktop-padding-section;
-  min-height: calc(100vh);
+  // min-height: calc(100vh);
   display: flex;
   flex-direction: row;
   gap: $gap-lg;
