@@ -6,11 +6,12 @@ import React from "react";
 import { AboutUs } from "./pageTypes/about-us";
 import FeatureWithImageSection from "@/components/sections/home/FeatureWithImageSection/FeatureWithImageSection";
 import sanityImage from "@/lib/sanity/imageBuilder";
+import OurTeams from "@/components/sections/home/OurTeams/OurTeams";
 
 const AboutUs = ({ footer, aboutUs }: AboutUs) => {
   return (
     <PageWrapper footer={footer}>
-      <PageHeading />
+      <PageHeading pageLink={aboutUs.pageLink} />
       {aboutUs.featureSections.map((featureSection, index) => (
         <FeatureWithImageSection
           bulletType={featureSection.bulletType}
@@ -23,7 +24,9 @@ const AboutUs = ({ footer, aboutUs }: AboutUs) => {
           key={index}
         />
       ))}
-      <AboutUsServices />
+      <OurTeams ourTeamsSection={aboutUs.ourTeamsSection} />
+
+      {/* <AboutUsServices /> */}
     </PageWrapper>
   );
 };
@@ -36,11 +39,11 @@ export async function getServerSideProps() {
     const footerQuery = `*[_type == 'footer'][0]`;
     const footerResult = await client.fetch(footerQuery);
 
-    const query = `*[_type == 'aboutUs'][0]`;
-    const result = await client.fetch(query);
+    const aboutUsQuery = `*[_type == 'aboutUs'][0]`;
+    const aboutUsResult = await client.fetch(aboutUsQuery);
 
     console.log(footerResult, "footerRes...");
-    return { props: { footer: footerResult, aboutUs: result } };
+    return { props: { footer: footerResult, aboutUs: aboutUsResult } };
   } catch (error) {
     return error;
   }
