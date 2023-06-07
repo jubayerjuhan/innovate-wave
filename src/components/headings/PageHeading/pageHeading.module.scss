@@ -1,7 +1,7 @@
 @import "../../../styles/globals.scss";
 
 .pageHeading {
-  padding: calc($padding-xl * 2);
+  padding: calc($padding-xl * 1.5);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,8 +10,9 @@
 
 .textSection {
   h4 {
-    font-size: $font-size-heading-lg;
-    color: $text-color;
+    font-size: $font-size-heading-md;
+    color: $primary-color;
+    text-shadow: rgba(101, 121, 222, 0.2) 0px 2px 8px 0px;
   }
 
   .linkSection {

@@ -16,11 +16,7 @@ const PageHeading = ({ pageLink }: PageHeadingProps) => {
         </div>
       </div>
       <div className={styles.iconSection}>
-        <Image
-          src="https://wp.devignedge.com/maruncy/home-3/wp-content/themes/maruncy/assets/images/element-1.svg"
-          alt="Image"
-          fill
-        />
+        <Image src="https://svgshare.com/i/tyu.svg" alt="Image" fill />
       </div>
     </div>
   );

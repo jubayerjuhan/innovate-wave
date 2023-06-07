@@ -1,12 +1,12 @@
 import client from "@/client/client";
 import PageHeading from "@/components/headings/PageHeading/PageHeading";
-import AboutUsServices from "@/components/sections/about-us/AboutUsServices";
 import PageWrapper from "@/components/wrappers/PageWrapper/PageWrapper";
 import React from "react";
 import { AboutUs } from "./pageTypes/about-us";
 import FeatureWithImageSection from "@/components/sections/home/FeatureWithImageSection/FeatureWithImageSection";
 import sanityImage from "@/lib/sanity/imageBuilder";
 import OurTeams from "@/components/sections/home/OurTeams/OurTeams";
+import AwardsSection from "@/components/sections/about-us/AwardsSection/AwardsSection";
 
 const AboutUs = ({ footer, aboutUs }: AboutUs) => {
   return (
@@ -24,9 +24,8 @@ const AboutUs = ({ footer, aboutUs }: AboutUs) => {
           key={index}
         />
       ))}
+      <AwardsSection />
       <OurTeams ourTeamsSection={aboutUs.ourTeamsSection} />
-
-      {/* <AboutUsServices /> */}
     </PageWrapper>
   );
 };

@@ -16,6 +16,7 @@ module.exports = {
       "wp.devignedge.com",
       "avatars.githubusercontent.com",
       "cdn.sanity.io",
+      "upload.wikimedia.org",
     ],
   },
 };
