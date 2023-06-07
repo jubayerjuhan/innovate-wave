@@ -24,7 +24,6 @@ export default function Home({
       <Herosection herosection={heroSection} />
       <OurClients ourClients={ourClients} />
       {featureSections.map((feature, key) => {
-        console.log(feature, "feature");
         return (
           <FeatureWithImageSection
             bulletType={feature.bulletType}

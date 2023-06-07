@@ -34,21 +34,24 @@
   justify-content: center;
   align-items: center;
   color: #0aa0eb;
+  width: 100%;
 
-  .icon {
-    font-size: 25px;
+  .iconImageWrapper {
+    position: relative;
+    width: 65%;
+    height: 65%;
   }
 }
 
 .bulletTitle {
   font-size: calc($font-size-xxl + 6px);
   color: $text-color;
-  margin-bottom: $margin-xs;
 }
 
 .description {
   font-size: $font-size-md;
   color: $text-color;
+  margin-top: $margin-xs;
 }
 
 @media (max-width: 768px) {

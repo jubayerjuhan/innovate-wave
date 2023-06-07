@@ -12,7 +12,7 @@ const AboutUs = ({ footer, aboutUs }: AboutUs) => {
   return (
     <PageWrapper footer={footer}>
       <PageHeading />
-      {aboutUs.featureSections.map((featureSection, index) => (
+      {/* {aboutUs.featureSections.map((featureSection, index) => (
         <FeatureWithImageSection
           bulletType={featureSection.bulletType}
           bullets={featureSection.bulletPoints}
@@ -23,7 +23,7 @@ const AboutUs = ({ footer, aboutUs }: AboutUs) => {
           reverse={featureSection.reverse}
           key={index}
         />
-      ))}
+      ))} */}
       <AboutUsServices />
     </PageWrapper>
   );
