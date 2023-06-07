@@ -1,4 +1,4 @@
-import ServiceCard from "@/components/cards/ServiceCard/ServiceCard";
+import ServiceCard from "@/components/cards/ServiceCards/ServiceCard/ServiceCard";
 import React from "react";
 import predefinedDesign from "../../../../styles/predefined.module.scss";
 import styles from "./ourServices.module.scss";

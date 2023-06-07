@@ -19,8 +19,6 @@ const items = [
 ];
 
 const OurClients = ({ ourClients }: OurClientsProps) => {
-  console.log(ourClients, "ourClients...");
-
   return (
     <div>
       <LogoSlider ourClients={ourClients} />

@@ -62,3 +62,30 @@
   height: 95px;
   width: 77px;
 }
+
+// 992 Screen Width Media Query
+
+@media (max-width: 992px) {
+  .pageHeading {
+    padding: calc($padding-xl);
+  }
+
+  .textSection {
+    h4 {
+      font-size: $font-size-heading-md;
+    }
+  }
+}
+// 992 Screen Width Media Query
+
+@media (max-width: 768px) {
+  .pageHeading {
+    padding: calc($padding-lg);
+  }
+
+  .textSection {
+    h4 {
+      font-size: $font-size-heading-lg;
+    }
+  }
+}
