@@ -11,6 +11,12 @@ const AwardsSection = () => {
       <div className={`${styles.awardWrapper}`}>
         <Award />
       </div>
+      <div className={`${styles.awardWrapper}`}>
+        <Award />
+      </div>
+      <div className={`${styles.awardWrapper}`}>
+        <Award />
+      </div>
     </div>
   );
 };
