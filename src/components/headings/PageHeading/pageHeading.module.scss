@@ -81,12 +81,36 @@
 
 @media (max-width: 768px) {
   .pageHeading {
-    padding: calc($padding-lg);
+    padding: calc($padding-md);
   }
 
   .textSection {
     h4 {
-      font-size: $font-size-heading-lg;
+      font-size: $font-size-heading-sm;
+    }
+  }
+
+  .homeLink {
+    gap: 3px;
+
+    .homeLinkTitle {
+      margin-top: 3px;
+      font-size: calc($font-size-sm);
+      font-weight: $font-weight-semibold;
+      color: $text-color;
+      text-decoration: none;
+    }
+
+    .homeLinkIcon {
+      font-size: 24px;
+    }
+
+    &::before {
+      position: absolute;
+      top: -50%;
+      left: -$gap-lg;
+      content: ".";
+      font-size: 30px;
     }
   }
 }
