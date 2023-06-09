@@ -2,17 +2,18 @@ import SeactionHeading from "@/components/headings/SectionHeading/SeactionHeadin
 import React from "react";
 import styles from "./contactUsSection.module.scss";
 import predefinedStyles from "../../../../styles/predefined.module.scss";
+import { ContactUsSectionProps } from "./types";
 
-const ContactUsSection = () => {
+const ContactUsSection = ({ contactUs }: ContactUsSectionProps) => {
   return (
     <div
       className={`${predefinedStyles.sectionPadding} ${styles.contactUsSection}`}
     >
       <SeactionHeading
         orientation="middle"
-        subtitle="Contact Us"
-        title="Get in touch with us for more information"
-        description="Get in touch with us for more information Get in touch with us for more information Get in touch with us for more information"
+        subtitle={contactUs.pageInformation.subtitle}
+        title={contactUs.pageInformation.title}
+        description={contactUs.pageInformation.description}
         small
       />
     </div>

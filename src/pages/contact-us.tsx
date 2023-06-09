@@ -6,11 +6,11 @@ import PageHeading from "@/components/headings/PageHeading/PageHeading";
 import SeactionHeading from "@/components/headings/SectionHeading/SeactionHeading";
 import ContactUsSection from "@/components/sections/contact-us/ContactUsSection/ContactUsSection";
 
-const ContactUs = ({ footer }: ContactUsProps) => {
+const ContactUs = ({ footer, contactUs }: ContactUsProps) => {
   return (
     <PageWrapper footer={footer}>
       {/* <PageHeading /> */}
-      <ContactUsSection />
+      <ContactUsSection contactUs={contactUs} />
     </PageWrapper>
   );
 };
@@ -22,9 +22,11 @@ export async function getServerSideProps() {
   try {
     const footerQuery = `*[_type == 'footer'][0]`;
     const footerResult = await client.fetch(footerQuery);
+    const contactUsQuery = `*[_type == 'contactUs'][0]`;
+    const contactUsResult = await client.fetch(contactUsQuery);
 
     console.log(footerResult, "footerRes...");
-    return { props: { footer: footerResult } };
+    return { props: { footer: footerResult, contactUs: contactUsResult } };
   } catch (error) {
     return error;
   }
