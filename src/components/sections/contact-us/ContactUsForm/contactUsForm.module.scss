@@ -6,9 +6,17 @@
 }
 
 .title {
-  font-size: $font-size-heading-sm;
+  font-size: calc($font-size-heading-sm - 5px);
   color: $text-color;
   margin-bottom: $margin-md;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 143, 215, 1) 0%,
+    rgba(45, 63, 78, 1) 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .contactForm {
