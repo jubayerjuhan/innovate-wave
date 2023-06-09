@@ -21,7 +21,7 @@ interface PageInformation {
   title: string;
 }
 
-interface ContactUsForm {
+export interface ContactUsForm {
   fields: Field[];
   title: string;
 }
