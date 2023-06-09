@@ -1,33 +1,28 @@
 @import "../../../../styles/globals.scss";
 
 .contactUsForm {
-  padding: $padding-xl;
+  padding: $padding-xl $desktop-padding-section;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  background-color: $white-color;
 }
 
 .title {
   font-size: calc($font-size-heading-sm - 5px);
   color: $text-color;
-  margin-bottom: $margin-md;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 143, 215, 1) 0%,
-    rgba(45, 63, 78, 1) 100%
-  );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-bottom: $margin-lg;
+  opacity: 0.8;
 }
 
 .contactForm {
   display: flex;
   flex-direction: column;
-  gap: $gap-sm;
+  gap: $gap-lg;
 }
 
 .twoByTwoGrid {
   display: grid;
-  gap: $gap-sm;
+  gap: $gap-lg;
   grid-template-columns: 1fr 1fr;
 }
 

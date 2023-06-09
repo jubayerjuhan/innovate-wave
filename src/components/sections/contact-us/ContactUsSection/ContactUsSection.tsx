@@ -18,7 +18,9 @@ const ContactUsSection = ({ contactUs }: ContactUsSectionProps) => {
         description={contactUs.pageInformation.description}
         small
       />
-      <ContactUsForm contactUsForm={contactUs.contactUsForm} />
+      <div className={styles.contactUsFormWrapper}>
+        <ContactUsForm contactUsForm={contactUs.contactUsForm} />
+      </div>
     </div>
   );
 };

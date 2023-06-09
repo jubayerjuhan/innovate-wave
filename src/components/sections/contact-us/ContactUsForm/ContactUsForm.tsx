@@ -5,8 +5,13 @@ import TextInputField from "@/components/inputs/TextInputField/TextInputField";
 import Button from "@/components/ui/Button/Button";
 import TextArea from "@/components/inputs/TextArea/TextArea";
 import SelectField from "@/components/inputs/SelectField/SelectField";
+import { useForm, ValidationError } from "@formspree/react";
 
 const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
+  const [state, handleSubmit] = useForm("xayzgzbk");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
   return (
     <div className={styles.contactUsForm}>
       <h4 className={styles.title}>{contactUsForm.title}</h4>

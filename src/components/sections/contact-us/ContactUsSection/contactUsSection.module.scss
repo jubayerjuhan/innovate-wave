@@ -1,2 +1,11 @@
+@import "../../../../styles/globals.scss";
+
 .contactUsSection {
+  background-image: url("../../../../assets/backgrounds/contact-bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.contactUsFormWrapper {
+  padding: $desktop-padding-section;
 }
