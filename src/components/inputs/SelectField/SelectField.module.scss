@@ -20,4 +20,8 @@
   height: 100%;
   font-family: $font-family;
   color: $text-color;
+
+  &:focus {
+    outline: 3px solid $primary-outline-color;
+  }
 }

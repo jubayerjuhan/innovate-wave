@@ -11,4 +11,8 @@
   font-family: $font-family;
   border-radius: 4px;
   height: 100%;
+
+  &:focus {
+    outline: 3px solid $primary-outline-color;
+  }
 }
