@@ -4,6 +4,7 @@ import { ContactUsFormProps } from "./types";
 import TextInputField from "@/components/inputs/TextInputField/TextInputField";
 import Button from "@/components/ui/Button/Button";
 import TextArea from "@/components/inputs/TextArea/TextArea";
+import SelectField from "@/components/inputs/SelectField/SelectField";
 
 const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
   return (
@@ -12,6 +13,7 @@ const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
       <form action="" className={styles.contactForm}>
         <div className={styles.twoByTwoGrid}>
           {contactUsForm.fields.slice(0, 4).map((field) => {
+            if (field.fieldType === "select") return <SelectField />;
             return (
               <TextInputField
                 key={field._key}
