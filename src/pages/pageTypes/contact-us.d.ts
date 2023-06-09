@@ -28,11 +28,13 @@ export interface ContactUsForm {
 
 interface Field {
   _key: string;
+  options: string[];
   fieldTitle: string;
   fieldType: string;
   fieldWidth: string;
   fieldPlaceholder: string;
   fieldName: string;
+
   _type: string;
 }
 

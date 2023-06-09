@@ -13,7 +13,8 @@ const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
       <form action="" className={styles.contactForm}>
         <div className={styles.twoByTwoGrid}>
           {contactUsForm.fields.slice(0, 4).map((field) => {
-            if (field.fieldType === "select") return <SelectField />;
+            if (field.fieldType === "select")
+              return <SelectField options={field.options} key={field._key} />;
             return (
               <TextInputField
                 key={field._key}
