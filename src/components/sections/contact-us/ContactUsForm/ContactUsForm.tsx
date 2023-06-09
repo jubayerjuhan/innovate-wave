@@ -17,13 +17,22 @@ const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
       <h4 className={styles.title}>{contactUsForm.title}</h4>
       <form action="" className={styles.contactForm}>
         <div className={styles.twoByTwoGrid}>
-          {contactUsForm.fields.slice(0, 4).map((field) => {
+          {contactUsForm.fields.slice(0, 4).map((field, index) => {
             if (field.fieldType === "select")
-              return <SelectField options={field.options} key={field._key} />;
+              return (
+                <SelectField
+                  options={field.options}
+                  key={field._key}
+                  name={field.fieldName}
+                  placeholder={field.fieldPlaceholder}
+                />
+              );
             return (
               <TextInputField
-                key={field._key}
+                name={field.fieldName}
                 placeholder={field.fieldPlaceholder}
+                type="text"
+                key={index}
               />
             );
           })}
