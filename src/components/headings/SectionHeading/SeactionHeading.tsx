@@ -7,12 +7,13 @@ const SeactionHeading = ({
   title,
   orientation,
   description,
+  small,
 }: SectionHeadingType) => {
   return (
     <div
       className={`${styles.sectionHeading} ${
         orientation === "middle" && styles.center
-      }`}
+      } ${small ? styles.smallHeading : ""}`}
     >
       <FeattureSubheading title={subtitle} />
       <h2 className={styles.heading}>{title}</h2>

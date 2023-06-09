@@ -3,4 +3,5 @@ interface SectionHeadingType {
   subtitle: string;
   orientation: "left" | "middle";
   description?: string;
+  small?: boolean;
 }
