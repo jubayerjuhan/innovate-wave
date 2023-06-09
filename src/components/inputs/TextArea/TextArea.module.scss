@@ -1,0 +1,13 @@
+@import "../../../styles/globals.scss";
+
+.textArea {
+  min-height: 250px;
+  font-size: calc($font-size-sm + 1px);
+  padding: calc($padding-sm + 1px);
+  outline: none;
+  width: 100%;
+  background-color: $ash-color;
+  border: none;
+  font-family: $font-family;
+  border-radius: 4px;
+}

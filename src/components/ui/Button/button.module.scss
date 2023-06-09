@@ -45,6 +45,11 @@
   font-size: $font-size-xxl;
 }
 
+.fullWidth {
+  width: 100%;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   .largerButton {
     padding: calc($padding-sm) calc($padding-sm);

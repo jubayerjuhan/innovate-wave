@@ -1,6 +1,28 @@
 @import "../../../../styles/globals.scss";
 
 .contactUsForm {
-  padding: $padding-lg;
-  background-color: red;
+  padding: $padding-xl;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.title {
+  font-size: $font-size-heading-sm;
+  color: $text-color;
+  margin-bottom: $margin-md;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-sm;
+}
+
+.twoByTwoGrid {
+  display: grid;
+  gap: $gap-sm;
+  grid-template-columns: 1fr 1fr;
+}
+
+.buttonWrapper {
+  margin-top: $margin-md;
 }

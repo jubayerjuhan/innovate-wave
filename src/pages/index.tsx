@@ -22,7 +22,7 @@ export default function Home({
   return (
     <PageWrapper footer={footer}>
       <Herosection herosection={heroSection} />
-      <OurClients ourClients={ourClients} />
+      {/* <OurClients ourClients={ourClients} /> */}
       {featureSections.map((feature, key) => {
         return (
           <FeatureWithImageSection

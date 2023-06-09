@@ -7,6 +7,7 @@ const Button = ({
   color,
   variant = "primary",
   size = "medium",
+  fullWidth,
 }: ButtonProps) => {
   let buttonClasses = styles.button;
 
@@ -25,7 +26,9 @@ const Button = ({
   }
   return (
     <button
-      className={`${buttonClasses} ${color === "orange" && styles.orangeColor}`}
+      className={`${buttonClasses} ${
+        color === "orange" && styles.orangeColor
+      } ${fullWidth && styles.fullWidth}`}
     >
       <p>{title}</p>
       <BsArrowRight />
