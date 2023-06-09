@@ -11,7 +11,7 @@ import AwardsSection from "@/components/sections/about-us/AwardsSection/AwardsSe
 const AboutUs = ({ footer, aboutUs }: AboutUs) => {
   return (
     <PageWrapper footer={footer}>
-      <PageHeading pageLink={aboutUs.pageLink} />
+      <PageHeading pageLink={aboutUs.pageLink} pageTitle="About Us" />
       {aboutUs.featureSections.map((featureSection, index) => (
         <FeatureWithImageSection
           bulletType={featureSection.bulletType}

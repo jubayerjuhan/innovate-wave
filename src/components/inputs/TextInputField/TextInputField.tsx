@@ -1,6 +1,7 @@
 import styles from "./TextInputField.module.scss";
+import { TextInputField } from "./types";
 
-const TextInputField = ({ style, ...otherProps }: any) => {
+const TextInputField = ({ style, ...otherProps }: TextInputField) => {
   return (
     <div className={styles.inputGroup} style={style}>
       <input

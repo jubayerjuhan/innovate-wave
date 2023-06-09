@@ -5,11 +5,11 @@ import { BiHomeCircle } from "react-icons/bi";
 import Link from "next/link";
 import { PageHeadingLinkProps, PageHeadingProps } from "./types";
 
-const PageHeading = ({ pageLink }: PageHeadingProps) => {
+const PageHeading = ({ pageLink, pageTitle }: PageHeadingProps) => {
   return (
     <div className={styles.pageHeading}>
       <div className={styles.textSection}>
-        <h4>About Us</h4>
+        <h4>{pageTitle}</h4>
         <div className={styles.linkSection}>
           <PageHeadingLink icon pageLink={{ link: "/", title: "Home" }} />
           <PageHeadingLink pageLink={pageLink} />
