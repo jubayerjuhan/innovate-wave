@@ -4,7 +4,7 @@ import styles from "./contactUsSection.module.scss";
 import predefinedStyles from "../../../../styles/predefined.module.scss";
 import { ContactUsSectionProps } from "./types";
 import ContactUsForm from "../ContactUsForm/ContactUsForm";
-import ContactCard from "@/components/cards/ContactCard/ContactCard";
+import ContractAddress from "../ContactAddress/ContractAddress";
 
 const ContactUsSection = ({ contactUs }: ContactUsSectionProps) => {
   console.log(contactUs);
@@ -21,7 +21,7 @@ const ContactUsSection = ({ contactUs }: ContactUsSectionProps) => {
       />
       <div className={styles.contactUsFormWrapper}>
         <ContactUsForm contactUsForm={contactUs.contactUsForm} />
-        <ContactCard />
+        <ContractAddress />
       </div>
     </div>
   );

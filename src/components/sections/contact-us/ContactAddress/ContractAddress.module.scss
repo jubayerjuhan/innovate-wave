@@ -1,0 +1,11 @@
+@import "../../../../styles/globals.scss";
+
+.wrapper {
+  margin-top: $desktop-margin-section;
+}
+
+.contactCardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap-lg;
+}

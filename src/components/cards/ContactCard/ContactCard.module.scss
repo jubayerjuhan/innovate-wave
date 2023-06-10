@@ -1,7 +1,6 @@
 @import "../../../styles/globals.scss";
 
 .contactCard {
-  margin-top: 30px;
   display: flex;
   gap: calc($gap-sm + 3px);
   flex-direction: column;
@@ -9,7 +8,7 @@
   justify-content: center;
   background-color: $white-color;
   padding: $padding-lg $padding-xl;
-  max-width: fit-content;
+  min-width: fit-content;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 5px;
 }
