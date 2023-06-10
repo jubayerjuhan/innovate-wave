@@ -2,22 +2,43 @@ import React from "react";
 import styles from "./ContractAddress.module.scss";
 import SeactionHeading from "@/components/headings/SectionHeading/SeactionHeading";
 import ContactCard from "@/components/cards/ContactCard/ContactCard";
+import { MoreWaysToContact } from "@/pages/pageTypes/contact-us";
 
-const ContractAddress = () => {
+const ContractAddress = ({
+  contactCards,
+  socialMediaCard,
+  subtitle,
+  description,
+  title,
+}: MoreWaysToContact) => {
   return (
     <div className={styles.wrapper}>
       <SeactionHeading
         orientation="left"
-        subtitle="Reach Us"
-        title="More Ways To Reach Us"
-        description="We Just Dont Have One Way To Reach Out Us, You Can Reach To Us Physically As Well As By Email Or Social Media"
+        subtitle={subtitle}
+        title={title}
+        description={description}
         small
       />
 
       <div className={styles.contactCardContainer}>
-        <ContactCard />
-        <ContactCard />
-        <ContactCard />
+        {contactCards.map((card) => (
+          <ContactCard
+            key={card._key}
+            description={card.description}
+            image={card.image}
+            title={card.title}
+            link={card.link}
+            type={"single"}
+          />
+        ))}
+        <ContactCard
+          description={socialMediaCard.title}
+          image={socialMediaCard.image}
+          title={socialMediaCard.title}
+          type="array"
+          options={socialMediaCard.socialMedias}
+        />
       </div>
     </div>
   );

@@ -21,7 +21,13 @@ const ContactUsSection = ({ contactUs }: ContactUsSectionProps) => {
       />
       <div className={styles.contactUsFormWrapper}>
         <ContactUsForm contactUsForm={contactUs.contactUsForm} />
-        <ContractAddress />
+        <ContractAddress
+          contactCards={contactUs.moreWays.contactCards}
+          description={contactUs.moreWays.description}
+          socialMediaCard={contactUs.moreWays.socialMediaCard}
+          subtitle={contactUs.moreWays.subtitle}
+          title={contactUs.moreWays.title}
+        />
       </div>
     </div>
   );

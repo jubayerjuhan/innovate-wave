@@ -1,21 +1,49 @@
 import React from "react";
 import styles from "./ContactCard.module.scss";
 import Image from "next/image";
-const ContactCard = () => {
+import { ContactCardProps } from "./types";
+import sanityImage from "@/lib/sanity/imageBuilder";
+const ContactCard: React.FC<ContactCardProps> = ({
+  description,
+  image,
+  title,
+  type,
+  options,
+  link,
+}) => {
   return (
     <div className={styles.contactCard}>
       <div className={styles.contactCardIconWrapper}>
         <Image
           className={styles.contactCardIconWrapper}
-          src={
-            "https://cdn3d.iconscout.com/3d/premium/thumb/location-pin-3994307-3307641.png"
-          }
+          src={sanityImage(image).url()}
           fill
-          alt="Contact Us Card Icon"
+          alt={title}
         />
       </div>
-      <h4 className={styles.contactCardType}>Email</h4>
-      <p className={styles.contactTitle}>team@innovatewave.com</p>
+      <h4 className={styles.contactCardType}>{title}</h4>
+      {type === "single" ? (
+        <a className={styles.contactTitle} href={link} target="_blank">
+          {description}
+        </a>
+      ) : (
+        <div className={styles.socialMedias}>
+          {options?.map((option) => (
+            <div className={styles.socialMedia} key={option._key}>
+              <div className={styles.socialMediaImageWrapper}>
+                <Image
+                  src={sanityImage(option.logo).url()}
+                  alt={option.title}
+                  fill
+                />
+              </div>
+              <a target="_blank" className={styles.contactTitle}>
+                {option.title}
+              </a>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

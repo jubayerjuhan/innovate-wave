@@ -38,7 +38,7 @@ interface Field {
   _type: string;
 }
 
-type SocialMedia = {
+export type SocialMedia = {
   _type: "socialMedia";
   title: string;
   link: string;
@@ -79,6 +79,7 @@ export type MoreWaysToContact = {
       };
     };
   };
+  description: string;
   subtitle: string;
   contactCards: ContactCard[];
   title: string;
