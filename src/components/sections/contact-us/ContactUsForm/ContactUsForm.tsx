@@ -6,15 +6,37 @@ import Button from "@/components/ui/Button/Button";
 import TextArea from "@/components/inputs/TextArea/TextArea";
 import SelectField from "@/components/inputs/SelectField/SelectField";
 import { useForm as FormSpree, ValidationError } from "@formspree/react";
-
+import {
+  Formik,
+  FormikHelpers,
+  FormikProps,
+  Form,
+  Field,
+  FieldProps,
+  useFormik,
+} from "formik";
 const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
   const [state, handleSubmit] = FormSpree("xayzgzbk");
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
+  // if (state.succeeded) {
+  //   return <p>Thanks for joining!</p>;
+  // }
+
+  const formik = useFormik({
+    initialValues: {},
+    onSubmit: (values) => {
+      // Handle form submission
+      console.log(values);
+    },
+  });
+
+  const handleClick = () => {
+    console.log("object");
+  };
+
   return (
     <div className={styles.contactUsForm}>
       <h4 className={styles.title}>{contactUsForm.title}</h4>
+
       <form action="" className={styles.contactForm}>
         <div className={styles.twoByTwoGrid}>
           {contactUsForm.fields.slice(0, 4).map((field, index) => {
@@ -29,10 +51,12 @@ const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
               );
             return (
               <TextInputField
+                key={index}
                 name={field.fieldName}
                 placeholder={field.fieldPlaceholder}
                 type="text"
-                key={index}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
               />
             );
           })}
@@ -43,7 +67,9 @@ const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
           </div>
         ))}
       </form>
-      <div className={styles.buttonWrapper}>
+
+      <button onClick={() => formik.submitForm()}>Submit</button>
+      <div className={styles.buttonWrapper} onClick={handleClick}>
         <Button title="Submit Your Issue" size="large" fullWidth />
       </div>
     </div>
