@@ -1,0 +1,16 @@
+@import "../../styles/globals.scss";
+
+.lottieAnimation {
+  // background-color: red;
+  padding: $padding-lg;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-lg;
+  align-items: center;
+}
+
+.message {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-medium;
+}

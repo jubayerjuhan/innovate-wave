@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./contactUsForm.module.scss";
-import { ContactUsFormProps } from "./types";
 import TextInputField from "@/components/inputs/TextInputField/TextInputField";
 import Button from "@/components/ui/Button/Button";
 import TextArea from "@/components/inputs/TextArea/TextArea";
 import SelectField from "@/components/inputs/SelectField/SelectField";
-import { useForm as FormSpree, ValidationError } from "@formspree/react";
+import { useForm as FormSpree } from "@formspree/react";
+import { ContactUsFormProps } from "./types";
 import { useFormik } from "formik";
 import contactUsValidation from "@/constants/schemas/formValidation/contactUsValidationSchema";
+import LottieAnimation from "@/components/animations/LottieAnimation";
+import mailSendAnimation from "../../../../assets/animations/mailsend-done.json";
 
 const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
   const [state, handleFormSpreeSubmit] = FormSpree("xayzgzbk");
@@ -27,6 +29,11 @@ const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
     <div className={styles.contactUsForm}>
       <h4 className={styles.title}>{contactUsForm.title}</h4>
 
+      <LottieAnimation
+        message="Your Message Has Been Sent"
+        animationFile={mailSendAnimation}
+        buttonTitle="Go To Homepage"
+      />
       <form action="" className={styles.contactForm}>
         <div className={styles.twoByTwoGrid}>
           {contactUsForm.fields.slice(0, 4).map((field, index) => {
