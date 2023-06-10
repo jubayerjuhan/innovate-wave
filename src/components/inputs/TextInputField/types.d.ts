@@ -9,6 +9,5 @@ export interface TextInputField {
   placeholder: string;
   label?: string;
   onChange: any;
-  onBlur: any;
   errorMessage?: string;
 }

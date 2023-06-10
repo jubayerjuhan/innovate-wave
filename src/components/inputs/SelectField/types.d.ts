@@ -8,6 +8,5 @@ export type SelectFieldProps = {
   placeholder: string;
   label?: string;
   onChange: any;
-  onBlur: any;
   errorMessage?: string;
 };

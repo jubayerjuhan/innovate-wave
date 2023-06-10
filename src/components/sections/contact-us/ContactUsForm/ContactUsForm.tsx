@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./contactUsForm.module.scss";
 import { ContactUsFormProps } from "./types";
 import TextInputField from "@/components/inputs/TextInputField/TextInputField";
@@ -8,20 +8,19 @@ import SelectField from "@/components/inputs/SelectField/SelectField";
 import { useForm as FormSpree, ValidationError } from "@formspree/react";
 import { useFormik } from "formik";
 import contactUsValidation from "@/constants/schemas/formValidation/contactUsValidationSchema";
+
 const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
-  const [state, handleSubmit] = FormSpree("xayzgzbk");
+  const [state, handleFormSpreeSubmit] = FormSpree("xayzgzbk");
 
   const formik = useFormik({
     initialValues: {},
     validationSchema: contactUsValidation,
-    onSubmit: (values) => {
-      console.log(values);
-    },
+    onSubmit: (values) => handleFormSubmit(values),
+    validateOnChange: false,
   });
 
-  const handleFormSubmit = () => {
-    formik.submitForm();
-    console.log(formik.errors);
+  const handleFormSubmit = (values: any) => {
+    handleFormSpreeSubmit(values);
   };
 
   return (
@@ -40,7 +39,6 @@ const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
                   name={field.fieldName}
                   placeholder={field.fieldPlaceholder}
                   onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
                   errorMessage={
                     formik.errors[field.fieldName as keyof typeof formik.errors]
                   }
@@ -54,7 +52,6 @@ const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
                 placeholder={field.fieldPlaceholder}
                 type="text"
                 onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
                 errorMessage={
                   formik.errors[field.fieldName as keyof typeof formik.errors]
                 }
@@ -69,7 +66,6 @@ const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
               key={field._key}
               placeHolder={field.fieldPlaceholder}
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
               errorMessage={
                 formik.errors[field.fieldName as keyof typeof formik.errors]
               }
@@ -77,7 +73,10 @@ const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
           </div>
         ))}
       </form>
-      <div className={styles.buttonWrapper} onClick={handleFormSubmit}>
+      <div
+        className={styles.buttonWrapper}
+        onClick={() => formik.handleSubmit()}
+      >
         <Button title="Submit Your Issue" size="large" fullWidth />
       </div>
     </div>
