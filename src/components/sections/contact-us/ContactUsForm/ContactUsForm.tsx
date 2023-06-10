@@ -28,64 +28,72 @@ const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
   return (
     <div className={styles.contactUsForm}>
       <h4 className={styles.title}>{contactUsForm.title}</h4>
-
-      <LottieAnimation
-        message="Your Message Has Been Sent"
-        animationFile={mailSendAnimation}
-        buttonTitle="Go To Homepage"
-      />
-      <form action="" className={styles.contactForm}>
-        <div className={styles.twoByTwoGrid}>
-          {contactUsForm.fields.slice(0, 4).map((field, index) => {
-            if (field.fieldType === "select")
-              return (
-                <SelectField
+      {state.succeeded ? (
+        <LottieAnimation
+          message="Your Message Has Been Sent"
+          animationFile={mailSendAnimation}
+          buttonTitle="Go To Homepage"
+        />
+      ) : (
+        <>
+          <form action="" className={styles.contactForm}>
+            <div className={styles.twoByTwoGrid}>
+              {contactUsForm.fields.slice(0, 4).map((field, index) => {
+                if (field.fieldType === "select")
+                  return (
+                    <SelectField
+                      id={field.fieldName}
+                      options={field.options}
+                      key={field._key}
+                      name={field.fieldName}
+                      placeholder={field.fieldPlaceholder}
+                      onChange={formik.handleChange}
+                      errorMessage={
+                        formik.errors[
+                          field.fieldName as keyof typeof formik.errors
+                        ]
+                      }
+                    />
+                  );
+                return (
+                  <TextInputField
+                    id={field.fieldName}
+                    key={index}
+                    name={field.fieldName}
+                    placeholder={field.fieldPlaceholder}
+                    type="text"
+                    onChange={formik.handleChange}
+                    errorMessage={
+                      formik.errors[
+                        field.fieldName as keyof typeof formik.errors
+                      ]
+                    }
+                  />
+                );
+              })}
+            </div>
+            {contactUsForm.fields.slice(4, 5).map((field) => (
+              <div className={styles.messageAreaWrapper} key={field._key}>
+                <TextArea
                   id={field.fieldName}
-                  options={field.options}
                   key={field._key}
-                  name={field.fieldName}
-                  placeholder={field.fieldPlaceholder}
+                  placeHolder={field.fieldPlaceholder}
                   onChange={formik.handleChange}
                   errorMessage={
                     formik.errors[field.fieldName as keyof typeof formik.errors]
                   }
                 />
-              );
-            return (
-              <TextInputField
-                id={field.fieldName}
-                key={index}
-                name={field.fieldName}
-                placeholder={field.fieldPlaceholder}
-                type="text"
-                onChange={formik.handleChange}
-                errorMessage={
-                  formik.errors[field.fieldName as keyof typeof formik.errors]
-                }
-              />
-            );
-          })}
-        </div>
-        {contactUsForm.fields.slice(4, 5).map((field) => (
-          <div className={styles.messageAreaWrapper} key={field._key}>
-            <TextArea
-              id={field.fieldName}
-              key={field._key}
-              placeHolder={field.fieldPlaceholder}
-              onChange={formik.handleChange}
-              errorMessage={
-                formik.errors[field.fieldName as keyof typeof formik.errors]
-              }
-            />
+              </div>
+            ))}
+          </form>
+          <div
+            className={styles.buttonWrapper}
+            onClick={() => formik.handleSubmit()}
+          >
+            <Button title="Submit Your Issue" size="large" fullWidth />
           </div>
-        ))}
-      </form>
-      <div
-        className={styles.buttonWrapper}
-        onClick={() => formik.handleSubmit()}
-      >
-        <Button title="Submit Your Issue" size="large" fullWidth />
-      </div>
+        </>
+      )}
     </div>
   );
 };
