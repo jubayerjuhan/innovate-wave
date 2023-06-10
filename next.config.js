@@ -17,6 +17,7 @@ module.exports = {
       "avatars.githubusercontent.com",
       "cdn.sanity.io",
       "upload.wikimedia.org",
+      "cdn3d.iconscout.com",
     ],
   },
 };

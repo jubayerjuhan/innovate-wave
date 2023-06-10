@@ -9,7 +9,6 @@ import ContactUsSection from "@/components/sections/contact-us/ContactUsSection/
 const ContactUs = ({ footer, contactUs }: ContactUsProps) => {
   return (
     <PageWrapper footer={footer}>
-      {/* <PageHeading /> */}
       <ContactUsSection contactUs={contactUs} />
     </PageWrapper>
   );
