@@ -4,13 +4,15 @@ import { TextAreaProps } from "./types";
 
 const TextArea = ({ placeHolder, ...props }: TextAreaProps) => {
   return (
-    <textarea
-      name=""
-      id=""
-      className={styles.textArea}
-      placeholder={placeHolder}
-      {...props}
-    />
+    <>
+      <textarea
+        name=""
+        id=""
+        className={styles.textArea}
+        placeholder={placeHolder}
+        {...props}
+      />
+    </>
   );
 };
 

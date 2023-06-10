@@ -10,4 +10,5 @@ export interface TextInputField {
   label?: string;
   onChange: any;
   onBlur: any;
+  errorMessage?: string;
 }

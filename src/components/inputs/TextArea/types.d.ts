@@ -3,4 +3,5 @@ export interface TextAreaProps {
   placeHolder: string;
   onChange: any;
   onBlur: any;
+  errorMessage?: string;
 }
