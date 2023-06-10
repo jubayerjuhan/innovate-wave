@@ -1,7 +1,7 @@
 @import "../../../styles/globals.scss";
 
 .formControl {
-  min-height: 60px;
+  height: 60px;
   font-size: calc($font-size-sm + 1px);
   padding: calc($padding-sm - 3px);
   outline: none;
@@ -10,7 +10,6 @@
   border: none;
   font-family: $font-family;
   border-radius: 4px;
-  height: 100%;
 
   &:focus {
     outline: 3px solid $primary-outline-color;

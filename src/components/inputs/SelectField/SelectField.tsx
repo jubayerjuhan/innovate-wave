@@ -1,3 +1,4 @@
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import styles from "./SelectField.module.scss";
 import { SelectFieldProps } from "./types";
 
@@ -6,11 +7,12 @@ const SelectField = ({
   options,
   name,
   placeholder,
+  errorMessage,
   label,
   ...props
 }: SelectFieldProps) => {
   return (
-    <div className={styles.selectGroup} style={style}>
+    <div>
       <select
         className={styles.selectControl}
         name={name}
@@ -23,6 +25,7 @@ const SelectField = ({
           </option>
         ))}
       </select>
+      {errorMessage && <ErrorMessage message={errorMessage} />}
     </div>
   );
 };

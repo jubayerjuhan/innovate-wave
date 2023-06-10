@@ -1,14 +1,7 @@
 @import "../../../styles/globals.scss";
 
-.selectGroup {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  width: 100%;
-}
-
 .selectControl {
-  min-height: 60px;
+  height: 60px;
   font-size: calc($font-size-sm + 1px);
   padding: calc($padding-sm - 3px);
   outline: none;
@@ -17,7 +10,6 @@
   border: none;
   font-family: $font-family;
   border-radius: 4px;
-  height: 100%;
   font-family: $font-family;
   color: $text-color;
 
