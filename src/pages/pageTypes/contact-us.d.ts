@@ -11,6 +11,7 @@ export interface ContactUs {
   _updatedAt: string;
   _createdAt: string;
   contactUsForm: ContactUsForm;
+  moreWays: MoreWaysToContact;
   _rev: string;
   _type: string;
 }
@@ -34,8 +35,53 @@ interface Field {
   fieldWidth: string;
   fieldPlaceholder: string;
   fieldName: string;
-
   _type: string;
 }
+
+type SocialMedia = {
+  _type: "socialMedia";
+  title: string;
+  link: string;
+  logo: {
+    asset: {
+      _ref: string;
+      _type: "reference";
+    };
+    _type: "image";
+  };
+  _key: string;
+};
+
+type ContactCard = {
+  _type: "contactCard";
+  description: string;
+  _key: string;
+  title: string;
+  image: {
+    _type: "image";
+    asset: {
+      _type: "reference";
+      _ref: string;
+    };
+  };
+  link: string;
+};
+
+export type MoreWaysToContact = {
+  socialMediaCard: {
+    socialMedias: SocialMedia[];
+    title: string;
+    image: {
+      _type: "image";
+      asset: {
+        _type: "reference";
+        _ref: string;
+      };
+    };
+  };
+  subtitle: string;
+  contactCards: ContactCard[];
+  title: string;
+};
 
 export default ContactUsProps;
