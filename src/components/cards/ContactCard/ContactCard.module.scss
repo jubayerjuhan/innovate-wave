@@ -38,11 +38,13 @@
 .socialMedias {
   display: flex;
   gap: $gap-md;
+  text-decoration: none;
 }
 .socialMedia {
   display: flex;
   align-items: center;
   gap: 5px;
+  text-decoration: none;
 }
 .socialMediaImageWrapper {
   position: relative;

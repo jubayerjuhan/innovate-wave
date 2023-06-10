@@ -3,6 +3,7 @@ import styles from "./ContactCard.module.scss";
 import Image from "next/image";
 import { ContactCardProps } from "./types";
 import sanityImage from "@/lib/sanity/imageBuilder";
+import Link from "next/link";
 const ContactCard: React.FC<ContactCardProps> = ({
   description,
   image,
@@ -23,13 +24,22 @@ const ContactCard: React.FC<ContactCardProps> = ({
       </div>
       <h4 className={styles.contactCardType}>{title}</h4>
       {type === "single" ? (
-        <a className={styles.contactTitle} href={link} target="_blank">
+        <Link
+          className={styles.contactTitle}
+          href={link ? link : "/"}
+          target="_blank"
+        >
           {description}
-        </a>
+        </Link>
       ) : (
         <div className={styles.socialMedias}>
           {options?.map((option) => (
-            <div className={styles.socialMedia} key={option._key}>
+            <Link
+              target="_blank"
+              href={option.link}
+              className={styles.socialMedia}
+              key={option._key}
+            >
               <div className={styles.socialMediaImageWrapper}>
                 <Image
                   src={sanityImage(option.logo).url()}
@@ -37,10 +47,8 @@ const ContactCard: React.FC<ContactCardProps> = ({
                   fill
                 />
               </div>
-              <a target="_blank" className={styles.contactTitle}>
-                {option.title}
-              </a>
-            </div>
+              <p className={styles.contactTitle}>{option.title}</p>
+            </Link>
           ))}
         </div>
       )}
