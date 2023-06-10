@@ -7,15 +7,15 @@ const SelectField = ({
   name,
   placeholder,
   label,
+  ...props
 }: SelectFieldProps) => {
-  const handleChange = (e: any) => {};
   return (
     <div className={styles.selectGroup} style={style}>
       <select
         className={styles.selectControl}
-        onChange={handleChange}
         name={name}
         placeholder={placeholder}
+        {...props}
       >
         {options?.map((option: any) => (
           <option key={option} value={option}>

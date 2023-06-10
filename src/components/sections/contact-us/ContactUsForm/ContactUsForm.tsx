@@ -43,14 +43,18 @@ const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
             if (field.fieldType === "select")
               return (
                 <SelectField
+                  id={field.fieldName}
                   options={field.options}
                   key={field._key}
                   name={field.fieldName}
                   placeholder={field.fieldPlaceholder}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
                 />
               );
             return (
               <TextInputField
+                id={field.fieldName}
                 key={index}
                 name={field.fieldName}
                 placeholder={field.fieldPlaceholder}
@@ -63,13 +67,17 @@ const ContactUsForm = ({ contactUsForm }: ContactUsFormProps) => {
         </div>
         {contactUsForm.fields.slice(4, 5).map((field) => (
           <div className={styles.messageAreaWrapper} key={field._key}>
-            <TextArea placeHolder={field.fieldPlaceholder} />
+            <TextArea
+              id={field.fieldName}
+              key={field._key}
+              placeHolder={field.fieldPlaceholder}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
           </div>
         ))}
       </form>
-
-      <button onClick={() => formik.submitForm()}>Submit</button>
-      <div className={styles.buttonWrapper} onClick={handleClick}>
+      <div className={styles.buttonWrapper} onClick={() => formik.submitForm()}>
         <Button title="Submit Your Issue" size="large" fullWidth />
       </div>
     </div>
