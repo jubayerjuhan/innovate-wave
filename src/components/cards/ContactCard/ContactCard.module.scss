@@ -51,3 +51,9 @@
   height: 20px;
   width: 20px;
 }
+
+@media (max-width: 1500px) {
+  .contactCard {
+    padding: $padding-md $padding-md;
+  }
+}
