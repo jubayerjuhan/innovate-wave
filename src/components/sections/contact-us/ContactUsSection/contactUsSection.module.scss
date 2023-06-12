@@ -9,3 +9,20 @@
 .contactUsFormWrapper {
   padding: $desktop-padding-section;
 }
+
+@media (max-width: 992px) {
+  .contactUsFormWrapper {
+    padding: $padding-xl;
+  }
+}
+@media (max-width: 768px) {
+  .contactUsFormWrapper {
+    padding: $padding-md;
+  }
+}
+@media (max-width: 500px) {
+  .contactUsFormWrapper {
+    padding: 0;
+    margin-bottom: $margin-md;
+  }
+}

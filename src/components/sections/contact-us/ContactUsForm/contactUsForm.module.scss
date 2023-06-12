@@ -29,3 +29,30 @@
 .buttonWrapper {
   margin-top: $margin-md;
 }
+
+@media (max-width: 1000px) {
+  .contactUsForm {
+    padding: $padding-lg $padding-xl;
+  }
+}
+
+@media (max-width: 992px) {
+  .twoByTwoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: calc($font-size-xxl + 5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .contactUsForm {
+    padding: $padding-xl;
+  }
+}
+@media (max-width: 500px) {
+  .contactUsForm {
+    padding: $padding-md;
+  }
+}
