@@ -38,6 +38,13 @@
   cursor: pointer;
   font-size: $font-size-lg;
   font-weight: $font-weight-medium;
+  display: flex;
+  gap: $gap-md;
+  align-items: center;
+
+  .downChevron {
+    margin-top: 5px;
+  }
 }
 
 .navlink::after {

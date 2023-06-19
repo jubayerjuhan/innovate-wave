@@ -6,7 +6,10 @@ import logo from "../../../assets/innovate-wave.svg";
 import styles from "./navbar.module.scss";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import {
+  MdKeyboardDoubleArrowRight,
+  MdKeyboardArrowDown,
+} from "react-icons/md";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -49,6 +52,9 @@ const Navbar = () => {
             onMouseLeave={() => handleMouseLeave()}
           >
             {navlink.name}
+            {navlink.childLinks && (
+              <MdKeyboardArrowDown className={styles.downChevron} />
+            )}
             {childNavOpen === index && navlink.childLinks && (
               <div className={styles.childNavlink__list__wrapper}>
                 <ul className={styles.childNavlink__list}>
