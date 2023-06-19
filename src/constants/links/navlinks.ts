@@ -10,6 +10,11 @@ const NAVLINKS = [
   {
     link: "/services",
     name: "Services",
+    childLinks: [
+      { link: "/hello", name: "Hello" },
+      { link: "/world", name: "World" },
+      { link: "/bye", name: "Bye" },
+    ],
   },
   {
     link: "/blog",

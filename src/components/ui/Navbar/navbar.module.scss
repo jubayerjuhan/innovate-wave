@@ -51,6 +51,70 @@
   transition: width 0.3s ease;
 }
 
+.childNavlink__list__wrapper {
+  border-radius: 5px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: $white-color;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  padding: $padding-md;
+  min-width: 150px;
+}
+
+.navlink:hover .childNavlink__list__wrapper {
+  display: block;
+  opacity: 1;
+  transform: translateY(0); /* Reset the transform */
+}
+
+.childNavlink__list {
+  display: flex;
+  flex-direction: column;
+  gap: calc($gap-sm + 5px);
+}
+
+.childNavlink {
+  list-style: none;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc($gap-sm - 5px);
+
+  a {
+    position: relative;
+    text-decoration: none;
+    color: $text-color;
+    width: fit-content;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: $primary-color;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.childNavIcon {
+  margin-top: 2px;
+  font-size: $font-size-body;
+}
+
 .navlink:hover::after {
   width: 100%;
 }
